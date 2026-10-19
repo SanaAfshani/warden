@@ -1,0 +1,40 @@
+{
+  "name": "@sanaafshani/warden-csr-storage",
+  "version": "0.1.0",
+  "description": "Browser storage decorators: namespaced, expiring, encrypted (AES-GCM, non-extractable keys).",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/SanaAfshani/warden.git", "directory": "packages/csr/storage" },
+  "homepage": "https://github.com/SanaAfshani/warden/tree/main/packages/csr/storage#readme",
+  "bugs": "https://github.com/SanaAfshani/warden/issues",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "@sanaafshani/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./react": {
+      "@sanaafshani/source": "./src/react.ts",
+      "types": "./dist/react.d.ts",
+      "default": "./dist/react.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "!dist/.tsbuildinfo"
+  ],
+  "peerDependencies": {
+    "@sanaafshani/warden-csr": "^0.1.0",
+    "react": ">=18.3.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

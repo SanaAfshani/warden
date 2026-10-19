@@ -1,0 +1,30 @@
+# @sanaafshani/warden-ssr-csrf
+
+CSRF protection for cookie-authenticated writes.
+
+```bash
+npm i @sanaafshani/warden-ssr @sanaafshani/warden-ssr-csrf
+```
+
+```ts
+import { csrf } from '@sanaafshani/warden-ssr-csrf';
+
+const guard = csrf({ secret: process.env.CSRF_SECRET!, origin: 'https://app.example.com' });
+
+// At sign-in: set the cookie, give the token to the client.
+const { token, cookie } = await guard.issue();
+
+// On writes:
+export const POST = chain().use(guard.protect()).use(session.required()).handle(update);
+```
+
+Three layers, because each alone has a gap:
+
+1. Your session cookie's SameSite.
+2. `Sec-Fetch-Site`, then exact `Origin`, then `Referer`.
+3. A signed double-submit token (`x-csrf-token` header must equal the
+   `__Host-csrf` cookie, and carry a valid HMAC). The signature defeats cookie
+   tossing from a sibling subdomain.
+
+Safe methods pass. Not needed for Bearer-token APIs or webhooks, where the
+browser attaches nothing. Use a secret distinct from the session secret.

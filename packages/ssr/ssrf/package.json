@@ -1,0 +1,32 @@
+{
+  "name": "@sanaafshani/warden-ssr-ssrf",
+  "version": "0.1.0",
+  "description": "SSRF-safe outbound fetch for Node: allowlist, address checks, DNS pinning.",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/SanaAfshani/warden.git", "directory": "packages/ssr/ssrf" },
+  "homepage": "https://github.com/SanaAfshani/warden/tree/main/packages/ssr/ssrf#readme",
+  "bugs": "https://github.com/SanaAfshani/warden/issues",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "@sanaafshani/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "!dist/.tsbuildinfo"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "peerDependencies": {
+    "@sanaafshani/warden-ssr": "^0.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "@sanaafshani/warden-csr-sanitize",
+  "version": "0.1.0",
+  "description": "HTML sanitising (DOMPurify), Trusted Types, context-specific escaping and safe URLs.",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/SanaAfshani/warden.git", "directory": "packages/csr/sanitize" },
+  "homepage": "https://github.com/SanaAfshani/warden/tree/main/packages/csr/sanitize#readme",
+  "bugs": "https://github.com/SanaAfshani/warden/issues",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "@sanaafshani/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./react": {
+      "@sanaafshani/source": "./src/react.ts",
+      "types": "./dist/react.d.ts",
+      "default": "./dist/react.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "!dist/.tsbuildinfo"
+  ],
+  "peerDependencies": {
+    "dompurify": "^3.4.16",
+    "react": ">=18.3.0"
+  },
+  "peerDependenciesMeta": {
+    "dompurify": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

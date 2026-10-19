@@ -1,0 +1,24 @@
+{
+  "name": "@sanaafshani/warden-eslint-plugin",
+  "version": "3.0.0",
+  "description": "ESLint rules that keep client-side security controls switched on: no raw HTML sinks, no unencrypted web storage, no unchecked URLs.",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/SanaAfshani/warden.git", "directory": "packages/eslint-plugin" },
+  "homepage": "https://github.com/SanaAfshani/warden/tree/main/packages/eslint-plugin#readme",
+  "bugs": "https://github.com/SanaAfshani/warden/issues",
+  "keywords": ["eslint", "eslintplugin", "security", "xss", "trusted-types"],
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "@sanaafshani/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "!dist/.tsbuildinfo"],
+  "engines": { "node": ">=22.12.0" },
+  "peerDependencies": { "eslint": ">=9.0.0" },
+  "publishConfig": { "access": "public" }
+}

@@ -1,0 +1,24 @@
+node_modules/
+.next/
+out/
+build/
+dist/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# A02/A05: secrets must never reach the repository. `.env.example` is the only
+# env file that is allowed in git, and it contains no values.
+.env
+.env.*
+!.env.example
+
+.DS_Store
+*.pem
+*.key
+*.p12
+npm-debug.log*
+.eslintcache
+
+# Per-developer IDE state (window layout, local run configs). Not project config.
+.idea/

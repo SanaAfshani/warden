@@ -1,0 +1,22 @@
+{
+  // Typecheck and editor project: every package's src and tests in one program,
+  // resolving workspace imports to source via the `@sanaafshani/source` export
+  // condition, so no build is needed first. Per-package environments (no Node
+  // types in universal code) are enforced by the build, see tsconfig.build.json.
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": false,
+    "noEmit": true,
+    "customConditions": ["@sanaafshani/source"],
+    "types": ["node"]
+  },
+  "include": [
+    "packages/ssr/*/src",
+    "packages/ssr/*/tests",
+    "packages/csr/*/src",
+    "packages/csr/*/tests",
+    "packages/eslint-plugin/src",
+    "packages/eslint-plugin/tests",
+    "vitest.config.mts"
+  ]
+}

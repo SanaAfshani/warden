@@ -1,0 +1,22 @@
+{
+  "files": [],
+  "references": [
+    { "path": "packages/ssr/core" },
+    { "path": "packages/ssr/headers" },
+    { "path": "packages/ssr/ratelimit" },
+    { "path": "packages/ssr/authn" },
+    { "path": "packages/ssr/csrf" },
+    { "path": "packages/ssr/access" },
+    { "path": "packages/ssr/validate" },
+    { "path": "packages/ssr/logging" },
+    { "path": "packages/ssr/crypto" },
+    { "path": "packages/ssr/ssrf" },
+    { "path": "packages/ssr/upload" },
+    { "path": "packages/csr/core" },
+    { "path": "packages/csr/storage" },
+    { "path": "packages/csr/sanitize" },
+    { "path": "packages/csr/access" },
+    { "path": "packages/csr/sso" },
+    { "path": "packages/eslint-plugin" }
+  ]
+}

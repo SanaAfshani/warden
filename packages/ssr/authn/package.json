@@ -1,0 +1,38 @@
+{
+  "name": "@sanaafshani/warden-ssr-authn",
+  "version": "0.1.0",
+  "description": "Signed sessions, generic authentication decorators, password policy, lockout and scrypt hashing.",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/SanaAfshani/warden.git", "directory": "packages/ssr/authn" },
+  "homepage": "https://github.com/SanaAfshani/warden/tree/main/packages/ssr/authn#readme",
+  "bugs": "https://github.com/SanaAfshani/warden/issues",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "@sanaafshani/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./node": {
+      "@sanaafshani/source": "./src/node.ts",
+      "types": "./dist/node.d.ts",
+      "default": "./dist/node.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "!dist/.tsbuildinfo"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "peerDependencies": {
+    "@sanaafshani/warden-ssr": "^0.1.0",
+    "jose": "^6.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
