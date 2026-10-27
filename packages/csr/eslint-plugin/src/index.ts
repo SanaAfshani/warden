@@ -59,7 +59,7 @@ function configure(
 }
 
 const plugin = {
-  meta: { name: '@sanaafshani/warden-csr-eslint-plugin', version: '0.1.0' },
+  meta: { name: '@sanaafshani/warden-csr-eslint-plugin', version: '0.1.1' },
   rules,
 } satisfies ESLint.Plugin;
 

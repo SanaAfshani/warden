@@ -1,12 +1,26 @@
 {
   "name": "@sanaafshani/warden-csr-eslint-plugin",
-  "version": "0.1.0",
-  "description": "ESLint rules that keep client-side security controls switched on: no raw HTML sinks, no unencrypted web storage, no unchecked URLs.",
+  "version": "0.1.1",
+  "description": "ESLint rules for browser security: no innerHTML or dangerouslySetInnerHTML, no unencrypted web storage, no unchecked URLs or unsafe target=_blank.",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "security",
+    "warden",
+    "browser",
+    "xss",
+    "trusted-types",
+    "react"
+  ],
   "license": "MIT",
-  "repository": { "type": "git", "url": "git+https://github.com/SanaAfshani/warden.git", "directory": "packages/csr/eslint-plugin" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SanaAfshani/warden.git",
+    "directory": "packages/csr/eslint-plugin"
+  },
   "homepage": "https://github.com/SanaAfshani/warden/tree/main/packages/csr/eslint-plugin#readme",
   "bugs": "https://github.com/SanaAfshani/warden/issues",
-  "keywords": ["eslint", "eslintplugin", "security", "xss", "trusted-types"],
   "type": "module",
   "sideEffects": false,
   "exports": {
@@ -17,8 +31,17 @@
     },
     "./package.json": "./package.json"
   },
-  "files": ["dist", "!dist/.tsbuildinfo"],
-  "engines": { "node": ">=22.12.0" },
-  "peerDependencies": { "eslint": ">=9.0.0" },
-  "publishConfig": { "access": "public" }
+  "files": [
+    "dist",
+    "!dist/.tsbuildinfo"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

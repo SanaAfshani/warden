@@ -1,5 +1,9 @@
 # @sanaafshani/warden-ssr-authn
 
+> Part of [warden](https://github.com/SanaAfshani/warden)'s **server track**: security controls as decorators for any
+> Fetch-API handler (Next.js route handlers, Hono, Bun, Deno, Workers). Here *SSR* means
+> *server side*, not server-side rendering.
+
 Who is calling: signed sessions, a generic authentication decorator,
 password policy, lockout, and scrypt hashing.
 

@@ -1,5 +1,9 @@
 # @sanaafshani/warden-csr-access
 
+> Part of [warden](https://github.com/SanaAfshani/warden)'s **browser track**: security controls for code that runs in the
+> browser. Here *CSR* means *client side*, not client-side rendering. Nothing here is a trust
+> boundary; the server track enforces.
+
 Permission-gated UI. **Display only:** the user controls the browser, so
 every permission shown here must be enforced again by the server
 (`@sanaafshani/warden-ssr-access`).

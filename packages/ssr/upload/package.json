@@ -1,9 +1,29 @@
 {
   "name": "@sanaafshani/warden-ssr-upload",
-  "version": "0.1.0",
-  "description": "Upload verification by magic bytes, with a multipart decorator.",
+  "version": "0.1.1",
+  "description": "File upload validation for Fetch-API servers: type detection by magic bytes, safe file names and a multipart decorator.",
+  "keywords": [
+    "security",
+    "warden",
+    "server",
+    "fetch-api",
+    "decorator",
+    "nextjs",
+    "hono",
+    "bun",
+    "cloudflare-workers",
+    "upload",
+    "file-upload",
+    "multipart",
+    "magic-bytes",
+    "file-type"
+  ],
   "license": "MIT",
-  "repository": { "type": "git", "url": "git+https://github.com/SanaAfshani/warden.git", "directory": "packages/ssr/upload" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SanaAfshani/warden.git",
+    "directory": "packages/ssr/upload"
+  },
   "homepage": "https://github.com/SanaAfshani/warden/tree/main/packages/ssr/upload#readme",
   "bugs": "https://github.com/SanaAfshani/warden/issues",
   "type": "module",
@@ -24,7 +44,7 @@
     "node": ">=22.12.0"
   },
   "peerDependencies": {
-    "@sanaafshani/warden-ssr": "^0.1.0"
+    "@sanaafshani/warden-ssr": "^0.1.1"
   },
   "publishConfig": {
     "access": "public"

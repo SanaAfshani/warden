@@ -68,6 +68,9 @@ That buys three things a middleware list cannot:
 
 ## The two tracks
 
+*SSR* and *CSR* here mean **server side** and **client side**: where the code
+runs, not how pages are rendered. Neither track renders anything.
+
 | Track | Core | Runs on | Plugins |
 | --- | --- | --- | --- |
 | **SSR** | `@sanaafshani/warden-ssr` | Any Fetch-API server | `headers` `ratelimit` `authn` `csrf` `access` `validate` `logging` `crypto` `ssrf` `upload` |

@@ -1,5 +1,9 @@
 # @sanaafshani/warden-csr
 
+> Part of [warden](https://github.com/SanaAfshani/warden)'s **browser track**: security controls for code that runs in the
+> browser. Here *CSR* means *client side*, not client-side rendering. Nothing here is a trust
+> boundary; the server track enforces.
+
 The contract browser plugins build on. No controls, no configuration, no
 dependencies.
 

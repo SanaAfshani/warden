@@ -1,9 +1,22 @@
 {
   "name": "@sanaafshani/warden-csr",
-  "version": "0.1.0",
-  "description": "Decorator contract for browser security plugins: Decorator, decorate(), KeyValueStore, Fetcher.",
+  "version": "0.1.1",
+  "description": "Browser-side security as composable decorators: decorate() plus the KeyValueStore and Fetcher contracts. Zero dependencies.",
+  "keywords": [
+    "security",
+    "warden",
+    "browser",
+    "client-side",
+    "decorator",
+    "typescript",
+    "owasp"
+  ],
   "license": "MIT",
-  "repository": { "type": "git", "url": "git+https://github.com/SanaAfshani/warden.git", "directory": "packages/csr/core" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SanaAfshani/warden.git",
+    "directory": "packages/csr/core"
+  },
   "homepage": "https://github.com/SanaAfshani/warden/tree/main/packages/csr/core#readme",
   "bugs": "https://github.com/SanaAfshani/warden/issues",
   "type": "module",

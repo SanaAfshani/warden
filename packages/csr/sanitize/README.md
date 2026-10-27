@@ -1,5 +1,9 @@
 # @sanaafshani/warden-csr-sanitize
 
+> Part of [warden](https://github.com/SanaAfshani/warden)'s **browser track**: security controls for code that runs in the
+> browser. Here *CSR* means *client side*, not client-side rendering. Nothing here is a trust
+> boundary; the server track enforces.
+
 Rendering untrusted content: HTML sanitising, Trusted Types, and escaping
 for each sink.
 

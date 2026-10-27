@@ -1,9 +1,29 @@
 {
   "name": "@sanaafshani/warden-ssr-access",
-  "version": "0.1.0",
-  "description": "Role-based and ownership access control with a permission decorator.",
+  "version": "0.1.1",
+  "description": "Authorization for Fetch-API servers: role-based access control, ownership (IDOR) checks and a permission decorator.",
+  "keywords": [
+    "security",
+    "warden",
+    "server",
+    "fetch-api",
+    "decorator",
+    "nextjs",
+    "hono",
+    "bun",
+    "cloudflare-workers",
+    "authorization",
+    "rbac",
+    "access-control",
+    "permissions",
+    "idor"
+  ],
   "license": "MIT",
-  "repository": { "type": "git", "url": "git+https://github.com/SanaAfshani/warden.git", "directory": "packages/ssr/access" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SanaAfshani/warden.git",
+    "directory": "packages/ssr/access"
+  },
   "homepage": "https://github.com/SanaAfshani/warden/tree/main/packages/ssr/access#readme",
   "bugs": "https://github.com/SanaAfshani/warden/issues",
   "type": "module",
@@ -24,7 +44,7 @@
     "node": ">=22.12.0"
   },
   "peerDependencies": {
-    "@sanaafshani/warden-ssr": "^0.1.0"
+    "@sanaafshani/warden-ssr": "^0.1.1"
   },
   "publishConfig": {
     "access": "public"

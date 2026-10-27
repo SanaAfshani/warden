@@ -1,9 +1,30 @@
 {
   "name": "@sanaafshani/warden-ssr-ratelimit",
-  "version": "0.1.0",
-  "description": "Sliding-window rate limiting as a handler decorator, with memory and Upstash stores.",
+  "version": "0.1.1",
+  "description": "Sliding-window rate limiting as a decorator for Fetch-API servers, with in-memory and Upstash Redis stores.",
+  "keywords": [
+    "security",
+    "warden",
+    "server",
+    "fetch-api",
+    "decorator",
+    "nextjs",
+    "hono",
+    "bun",
+    "cloudflare-workers",
+    "rate-limit",
+    "rate-limiting",
+    "throttle",
+    "brute-force",
+    "upstash",
+    "redis"
+  ],
   "license": "MIT",
-  "repository": { "type": "git", "url": "git+https://github.com/SanaAfshani/warden.git", "directory": "packages/ssr/ratelimit" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SanaAfshani/warden.git",
+    "directory": "packages/ssr/ratelimit"
+  },
   "homepage": "https://github.com/SanaAfshani/warden/tree/main/packages/ssr/ratelimit#readme",
   "bugs": "https://github.com/SanaAfshani/warden/issues",
   "type": "module",
@@ -24,7 +45,7 @@
     "node": ">=22.12.0"
   },
   "peerDependencies": {
-    "@sanaafshani/warden-ssr": "^0.1.0"
+    "@sanaafshani/warden-ssr": "^0.1.1"
   },
   "publishConfig": {
     "access": "public"

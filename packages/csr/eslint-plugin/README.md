@@ -1,9 +1,12 @@
 # @sanaafshani/warden-csr-eslint-plugin
 
+> Part of [warden](https://github.com/SanaAfshani/warden)'s **browser track**: security controls for code that runs in the
+> browser. Here *CSR* means *client side*, not client-side rendering. Nothing here is a trust
+> boundary; the server track enforces.
+
 Five ESLint rules that keep client-side security controls switched on, three of
 them tier `required` — they stay errors unless you waive them on the record.
-Part of the CSR track, because every rule guards browser code. It has no
-runtime dependency on the other CSR packages: the names it suggests
+It has no runtime dependency on the other CSR packages: the names it suggests
 (`SafeHtml`, `safeUrl`, an `encrypted()` store) are theirs by default and
 configurable per rule. Rule ids are `@sanaafshani/warden-csr/<rule>`.
 

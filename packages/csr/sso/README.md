@@ -1,5 +1,9 @@
 # @sanaafshani/warden-csr-sso
 
+> Part of [warden](https://github.com/SanaAfshani/warden)'s **browser track**: security controls for code that runs in the
+> browser. Here *CSR* means *client side*, not client-side rendering. Nothing here is a trust
+> boundary; the server track enforces.
+
 The browser half of a backend-for-frontend (BFF) login: your server runs the
 OIDC flow and keeps the tokens; the browser holds only an httpOnly cookie.
 XSS can then act while the tab is open, but cannot take a token home.

@@ -1,5 +1,9 @@
 # @sanaafshani/warden-ssr-ratelimit
 
+> Part of [warden](https://github.com/SanaAfshani/warden)'s **server track**: security controls as decorators for any
+> Fetch-API handler (Next.js route handlers, Hono, Bun, Deno, Workers). Here *SSR* means
+> *server side*, not server-side rendering.
+
 Sliding-window rate limiting as a decorator.
 
 ```bash

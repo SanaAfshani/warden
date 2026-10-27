@@ -1,5 +1,9 @@
 # @sanaafshani/warden-ssr-ssrf
 
+> Part of [warden](https://github.com/SanaAfshani/warden)'s **server track**: security controls as decorators for any
+> Fetch-API handler (Next.js route handlers, Hono, Bun, Deno, Workers). Here *SSR* means
+> *server side*, not server-side rendering.
+
 Outbound HTTP to URLs that input can influence, without reaching your
 internal network. **Node only** (needs `node:dns` and `node:https`).
 

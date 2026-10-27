@@ -1,9 +1,29 @@
 {
   "name": "@sanaafshani/warden-csr-storage",
-  "version": "0.1.0",
-  "description": "Browser storage decorators: namespaced, expiring, encrypted (AES-GCM, non-extractable keys).",
+  "version": "0.1.1",
+  "description": "Encrypted browser storage from decorators: namespaced, expiring, AES-GCM encrypted localStorage and sessionStorage with non-extractable keys.",
+  "keywords": [
+    "security",
+    "warden",
+    "browser",
+    "client-side",
+    "decorator",
+    "localstorage",
+    "sessionstorage",
+    "encryption",
+    "aes-gcm",
+    "indexeddb",
+    "web-crypto",
+    "zustand",
+    "redux-persist",
+    "react"
+  ],
   "license": "MIT",
-  "repository": { "type": "git", "url": "git+https://github.com/SanaAfshani/warden.git", "directory": "packages/csr/storage" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SanaAfshani/warden.git",
+    "directory": "packages/csr/storage"
+  },
   "homepage": "https://github.com/SanaAfshani/warden/tree/main/packages/csr/storage#readme",
   "bugs": "https://github.com/SanaAfshani/warden/issues",
   "type": "module",
@@ -26,7 +46,7 @@
     "!dist/.tsbuildinfo"
   ],
   "peerDependencies": {
-    "@sanaafshani/warden-csr": "^0.1.0",
+    "@sanaafshani/warden-csr": "^0.1.1",
     "react": ">=18.3.0"
   },
   "peerDependenciesMeta": {

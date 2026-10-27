@@ -1,9 +1,27 @@
 {
   "name": "@sanaafshani/warden-ssr",
-  "version": "0.1.0",
-  "description": "Decorator contract for server-side security plugins: Handler, Decorator, chain(), HttpError.",
+  "version": "0.1.1",
+  "description": "Server-side security for Fetch-API handlers as composable decorators: chain(), defineDecorator, HttpError. Zero dependencies.",
+  "keywords": [
+    "security",
+    "warden",
+    "server",
+    "fetch-api",
+    "decorator",
+    "nextjs",
+    "hono",
+    "bun",
+    "cloudflare-workers",
+    "middleware",
+    "owasp",
+    "typescript"
+  ],
   "license": "MIT",
-  "repository": { "type": "git", "url": "git+https://github.com/SanaAfshani/warden.git", "directory": "packages/ssr/core" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SanaAfshani/warden.git",
+    "directory": "packages/ssr/core"
+  },
   "homepage": "https://github.com/SanaAfshani/warden/tree/main/packages/ssr/core#readme",
   "bugs": "https://github.com/SanaAfshani/warden/issues",
   "type": "module",
@@ -16,7 +34,14 @@
     },
     "./package.json": "./package.json"
   },
-  "files": ["dist", "!dist/.tsbuildinfo"],
-  "engines": { "node": ">=22.12.0" },
-  "publishConfig": { "access": "public" }
+  "files": [
+    "dist",
+    "!dist/.tsbuildinfo"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

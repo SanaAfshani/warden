@@ -1,5 +1,9 @@
 # @sanaafshani/warden-ssr
 
+> Part of [warden](https://github.com/SanaAfshani/warden)'s **server track**: security controls as decorators for any
+> Fetch-API handler (Next.js route handlers, Hono, Bun, Deno, Workers). Here *SSR* means
+> *server side*, not server-side rendering.
+
 The contract every SSR plugin builds on: `Handler`, `Decorator`, `chain()`,
 `HttpError`, and the few primitives plugins share. No controls, no
 configuration, no dependencies.

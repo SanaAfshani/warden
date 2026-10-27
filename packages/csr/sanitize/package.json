@@ -1,9 +1,26 @@
 {
   "name": "@sanaafshani/warden-csr-sanitize",
-  "version": "0.1.0",
-  "description": "HTML sanitising (DOMPurify), Trusted Types, context-specific escaping and safe URLs.",
+  "version": "0.1.1",
+  "description": "XSS defence for the browser: DOMPurify HTML sanitising, Trusted Types, context-specific escaping and safe URLs, plus React <SafeHtml>.",
+  "keywords": [
+    "security",
+    "warden",
+    "browser",
+    "client-side",
+    "decorator",
+    "xss",
+    "sanitize",
+    "dompurify",
+    "trusted-types",
+    "escape-html",
+    "react"
+  ],
   "license": "MIT",
-  "repository": { "type": "git", "url": "git+https://github.com/SanaAfshani/warden.git", "directory": "packages/csr/sanitize" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SanaAfshani/warden.git",
+    "directory": "packages/csr/sanitize"
+  },
   "homepage": "https://github.com/SanaAfshani/warden/tree/main/packages/csr/sanitize#readme",
   "bugs": "https://github.com/SanaAfshani/warden/issues",
   "type": "module",
