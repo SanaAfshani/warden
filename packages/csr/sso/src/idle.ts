@@ -103,7 +103,7 @@ export function idleTimeout(options: IdleTimeoutOptions): IdleTimeout {
       for (const event of events) target.addEventListener(event, onActivity, listenerOptions);
       if (typeof document !== 'undefined') document.addEventListener('visibilitychange', onVisible);
       if ((options.crossTab ?? true) && typeof BroadcastChannel !== 'undefined') {
-        channel = new BroadcastChannel(`cs:idle:${options.namespace ?? 'app'}`);
+        channel = new BroadcastChannel(`warden:idle:${options.namespace ?? 'app'}`);
         channel.onmessage = (event: MessageEvent<unknown>) => {
           if (typeof event.data === 'number' && event.data <= Date.now()) touch(event.data);
         };

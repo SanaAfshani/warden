@@ -12,12 +12,21 @@ export default defineConfig({
       // Server code is tested without a DOM: a server module that reaches for
       // `window` should fail here, not in production.
       { extends: true, test: { name: 'ssr', environment: 'node', include: ['packages/ssr/*/tests/**/*.test.ts'] } },
-      { extends: true, test: { name: 'csr', environment: 'jsdom', include: ['packages/csr/*/tests/**/*.test.ts'] } },
+      {
+        extends: true,
+        test: {
+          name: 'csr',
+          environment: 'jsdom',
+          include: ['packages/csr/*/tests/**/*.test.ts'],
+          exclude: ['packages/csr/eslint-plugin/**'],
+        },
+      },
       // RuleTester registers its cases through global describe/it.
       {
         extends: true,
-        test: { name: 'eslint-plugin', environment: 'node', globals: true, include: ['packages/eslint-plugin/tests/**/*.test.ts'] },
+        test: { name: 'eslint-plugin', environment: 'node', globals: true, include: ['packages/csr/eslint-plugin/tests/**/*.test.ts'] },
       },
+      { extends: true, test: { name: 'release', environment: 'node', include: ['tests/**/*.test.ts'] } },
     ],
   },
 });

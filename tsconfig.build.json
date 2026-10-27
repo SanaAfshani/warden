@@ -17,6 +17,6 @@
     { "path": "packages/csr/sanitize" },
     { "path": "packages/csr/access" },
     { "path": "packages/csr/sso" },
-    { "path": "packages/eslint-plugin" }
+    { "path": "packages/csr/eslint-plugin" }
   ]
 }

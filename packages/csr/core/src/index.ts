@@ -6,4 +6,4 @@ export {
   type SecurityEvent,
   type SecurityEventHandler,
 } from './contracts.js';
-export type { BasePrincipal, Permission, Principal, Role, SecurityRegistry } from './registry.js';
+export type { Permission, SecurityRegistry } from './registry.js';

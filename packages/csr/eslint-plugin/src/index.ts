@@ -1,30 +1,12 @@
 /**
- * ============================================================================
- * @sanaafshani/warden-eslint-plugin
- * ============================================================================
+ * The library can make the safe thing easy; it cannot make the unsafe thing
+ * impossible. `localStorage.setItem` and `dangerouslySetInnerHTML` are one line
+ * away, and a control the build does not enforce survives only as long as the
+ * person who introduced it. These rules are that enforcement.
  *
- * ---------------------------------------------------------------------------
- * Why this package exists at all
- * ---------------------------------------------------------------------------
- * The library can make the safe thing easy. It cannot make the unsafe thing
- * impossible, because `localStorage.setItem` and `dangerouslySetInnerHTML` are
- * still right there, one line away, and they are shorter.
- *
- * A control that the build does not enforce survives exactly as long as the
- * person who introduced it. Six months later there is a new developer, a
- * deadline, and a Stack Overflow answer that uses `innerHTML`.
- *
- * These rules are the part that keeps working after everyone has forgotten the
- * conversation.
- *
- * ---------------------------------------------------------------------------
- * What is deliberately NOT here
- * ---------------------------------------------------------------------------
- * Nothing about roles, permissions, audit names or endpoints. Those are YOUR
- * domain, and a lint plugin that ships a vocabulary gets forked by the first
- * team whose vocabulary differs. Every rule that needs a name — the sanitising
- * component, the URL validator, the storage replacement — takes it as an
- * option, with our names only as defaults.
+ * No roles, permissions or endpoints: every name a rule needs (the sanitising
+ * component, the URL validator, the storage replacement) is an option, with
+ * the CSR track's names only as defaults.
  */
 
 import type { ESLint, Linter } from 'eslint';
@@ -44,7 +26,7 @@ const rules = {
 };
 
 /** The namespace a consumer's config must use to address these rules. */
-export const NAMESPACE = '@sanaafshani/warden';
+export const NAMESPACE = '@sanaafshani/warden-csr';
 
 const id = (name: string) => `${NAMESPACE}/${name}`;
 
@@ -59,13 +41,8 @@ export const tiers: Record<Tier, readonly string[]> = {
 };
 
 /**
- * Build a config from the tiers rather than by hand.
- *
- * Hand-written config objects drift: the previous `migrating` config had
- * `require-safe-url` at `warn` while the comment three lines above it argued
- * that warnings are read by nobody. Deriving both configs from one table means
- * a severity choice has to be made in the place where the reasoning lives.
- *
+ * Build a config from the tiers rather than by hand, so a severity is chosen
+ * where the reasoning lives and hand-written configs cannot drift from it.
  * `required` rules are not a parameter. That is the whole point of the tier.
  */
 function configure(
@@ -82,7 +59,7 @@ function configure(
 }
 
 const plugin = {
-  meta: { name: '@sanaafshani/warden-eslint-plugin', version: '3.0.0' },
+  meta: { name: '@sanaafshani/warden-csr-eslint-plugin', version: '0.1.0' },
   rules,
 } satisfies ESLint.Plugin;
 
@@ -119,7 +96,7 @@ export interface Downgrade {
 }
 
 export interface Waiver {
-  /** Rule name, with or without the `@sanaafshani/warden/` prefix. */
+  /** Rule name, with or without the `@sanaafshani/warden-csr/` prefix. */
   rule: string;
   /** The files this covers. A waiver with no scope is not a waiver. */
   files: readonly string[];

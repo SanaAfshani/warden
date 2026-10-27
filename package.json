@@ -14,14 +14,15 @@
   },
   "workspaces": [
     "packages/ssr/*",
-    "packages/csr/*",
-    "packages/eslint-plugin"
+    "packages/csr/*"
   ],
   "scripts": {
     "build": "tsc -b tsconfig.build.json",
     "typecheck": "tsc -p tsconfig.json",
     "lint": "eslint .",
-    "test": "vitest run"
+    "test": "vitest run",
+    "clean": "node -e \"const fs = require('fs'); for (const dir of fs.globSync('packages/*/*/dist')) fs.rmSync(dir, { recursive: true })\"",
+    "release": "npm run clean && npm run build && npm run typecheck && npm run lint && npm test && npm publish --workspaces"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

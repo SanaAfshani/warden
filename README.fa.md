@@ -30,7 +30,7 @@ npm i @sanaafshani/warden-ssr @sanaafshani/warden-ssr-headers @sanaafshani/warde
 npm i @sanaafshani/warden-csr @sanaafshani/warden-csr-storage
 
 # قوانینی که APIهای ناامن را از کدتان بیرون نگه می‌دارند
-npm i -D @sanaafshani/warden-eslint-plugin
+npm i -D @sanaafshani/warden-csr-eslint-plugin
 ```
 
 ```ts
@@ -79,7 +79,7 @@ export const POST = chain()
 | Track | Core | اجرا روی | پلاگین‌ها |
 | --- | --- | --- | --- |
 | **SSR** | `@sanaafshani/warden-ssr` | هر سرور Fetch-API | `headers` `ratelimit` `authn` `csrf` `access` `validate` `logging` `crypto` `ssrf` `upload` |
-| **CSR** | `@sanaafshani/warden-csr` | مرورگر | `storage` `sanitize` `access` `sso` |
+| **CSR** | `@sanaafshani/warden-csr` | مرورگر | `storage` `sanitize` `access` `sso` `eslint-plugin` |
 
 <div dir="rtl">
 
@@ -88,7 +88,8 @@ export const POST = chain()
 
 دو track هیچ کدی به اشتراک نمی‌گذارند. پلاگین SSR هرگز کد مرورگر را
 نمی‌کشد و برعکس؛ یک قانون lint در همین مخزن اگر یکی دیگری را import کند build
-را می‌اندازد. `@sanaafshani/warden-eslint-plugin` بیرون هر دو می‌نشیند.
+را می‌اندازد. نام هر پکیج با track خودش شروع می‌شود، پس `npm ls '@sanaafshani/warden-ssr*'`
+دقیقاً نشان می‌دهد سرور چه نصب کرده است.
 
 ### ترکیب در مرورگر
 
@@ -153,7 +154,7 @@ ESLint از نظر فنی به پلاگین اجازه نمی‌دهد جلوی 
 | [docs/getting-started.md](docs/getting-started.md) | نصب، اولین زنجیره، اولین store |
 | [docs/ssr.md](docs/ssr.md) | قرارداد سرور، ترتیب پیشنهادی، نوشتن پلاگین |
 | [docs/csr.md](docs/csr.md) | قرارداد مرورگر، ترکیب، نوشتن پلاگین |
-| [packages/eslint-plugin](packages/eslint-plugin#readme) | پنج قانون، درجه‌ها، `enforce` و `waive` |
+| [packages/csr/eslint-plugin](packages/csr/eslint-plugin#readme) | پنج قانون، درجه‌ها، `enforce` و `waive` |
 | [SECURITY.md](SECURITY.md) | گزارش آسیب‌پذیری، و آنچه این کتابخانه پوشش نمی‌دهد |
 
 <div dir="rtl">
@@ -181,9 +182,9 @@ Node **۲۲.۱۲ یا بالاتر** (نسخهٔ ۲۰ به پایان پشتیب
 
 ```
 packages/ssr/<core|plugin>   track سرور
-packages/csr/<core|plugin>   track مرورگر
-packages/eslint-plugin       قوانین lint، مستقل از هر دو
+packages/csr/<core|plugin>   track مرورگر (قوانین lint یک پلاگین CSR است)
 docs/                        یک سند برای هر track
+tests/                       بررسی‌های انتشار: نسخه‌ها، بازهٔ peerها، LICENSE
 ```
 
 ```bash
@@ -192,6 +193,7 @@ npm run build       # tsc -b، هر پکیج با tsconfig خودش
 npm run typecheck   # سورس و تست‌ها، resolve به src (نیازی به build نیست)
 npm run lint        # نیاز به build دارد: ESLint پلاگین را از dist می‌خواند
 npm test            # SSR در Node، CSR در jsdom
+npm run release     # build تمیز، همهٔ بررسی‌های بالا، سپس npm publish --workspaces
 ```
 
 <div dir="rtl">

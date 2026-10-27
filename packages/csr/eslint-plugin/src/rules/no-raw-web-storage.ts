@@ -84,7 +84,7 @@ export const noRawWebStorage: WardenRule = createRule(
   },
   (context) => {
     const options = (context.options[0] ?? {}) as { replacement?: string; allowReads?: boolean };
-    const replacement = options.replacement ?? 'an `encrypted()` store from @sanaafshani/warden-csr-storage';
+    const replacement = options.replacement ?? 'encrypted() from @sanaafshani/warden-csr-storage';
     const allowReads = options.allowReads ?? false;
 
     /**

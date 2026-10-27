@@ -11,7 +11,7 @@ export interface SessionChannel {
  * other tabs only). Carries no data, only the fact.
  */
 export function sessionChannel(namespace = 'app'): SessionChannel {
-  const name = `cs:session:${namespace}`;
+  const name = `warden:session:${namespace}`;
   const handlers = new Set<() => void>();
   const fire = () => {
     for (const handler of handlers) {

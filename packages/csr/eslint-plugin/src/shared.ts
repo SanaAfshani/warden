@@ -25,7 +25,7 @@ import type { Tier } from './severity.js';
 export const REPO = 'https://github.com/SanaAfshani/warden';
 
 export function docs(name: string): string {
-  return `${REPO}/blob/main/packages/eslint-plugin/README.md#${name}`;
+  return `${REPO}/blob/main/packages/csr/eslint-plugin/README.md#${name}`;
 }
 
 /**

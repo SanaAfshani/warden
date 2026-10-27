@@ -27,4 +27,4 @@ const store = decorate(base, logged, otherDecorator); // logged(otherDecorator(b
 | `KeyValueStore` | Async string store; what storage decorators wrap. |
 | `Fetcher` | The `fetch` signature; what fetch decorators wrap. |
 | `emit`, `SecurityEvent` | The event shape plugins report through `onEvent`. |
-| `SecurityRegistry`, `Role`, `Permission`, `Principal` | Augment once with your vocabulary. |
+| `SecurityRegistry`, `Permission` | Augment once with your permission names; `-access` reads them. |

@@ -6,8 +6,9 @@ needs the other — a backend with no browser code installs only the SSR track.
 ## Install
 
 Pick the core for your side, then the plugins for the controls you actually
-want. Plugins declare their core as a **peer** dependency, so installing one
-without its core is an install-time error rather than a runtime surprise.
+want. Plugins declare their core as a **peer** dependency, so every plugin
+shares the one copy of the core your app has; a plugin built for another
+version of the core is an install-time error rather than a runtime surprise.
 
 ```bash
 npm i @sanaafshani/warden-ssr \
@@ -151,12 +152,12 @@ The runtime controls are opt-in per route. The lint rules are what stop the
 next person from going around them.
 
 ```bash
-npm i -D @sanaafshani/warden-eslint-plugin
+npm i -D @sanaafshani/warden-csr-eslint-plugin
 ```
 
 ```js
 // eslint.config.mjs
-import warden from '@sanaafshani/warden-eslint-plugin';
+import warden from '@sanaafshani/warden-csr-eslint-plugin';
 
 export default warden.enforce(
   { ...warden.configs.recommended, files: ['src/**/*.{ts,tsx}'] },

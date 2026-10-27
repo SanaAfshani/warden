@@ -15,8 +15,7 @@
     "packages/ssr/*/tests",
     "packages/csr/*/src",
     "packages/csr/*/tests",
-    "packages/eslint-plugin/src",
-    "packages/eslint-plugin/tests",
+    "tests",
     "vitest.config.mts"
   ]
 }

@@ -2,7 +2,7 @@
 import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import globals from 'globals';
-import warden from '@sanaafshani/warden-eslint-plugin';
+import warden from '@sanaafshani/warden-csr-eslint-plugin';
 
 // `enforce` is the OUTERMOST call on purpose: it only inspects what it is
 // handed, so wrapping a fragment would miss a downgrade elsewhere in the array.
@@ -31,7 +31,7 @@ export default warden.enforce(...tseslint.config(
   // Outside tsconfig.json, so no type information.
   { ...tseslint.configs.disableTypeChecked, files: ['**/*.mjs'] },
 
-  // Tracks and the eslint plugin share no code; universal code stays framework-free.
+  // The tracks share no code; universal code stays framework-free.
   {
     files: ['packages/ssr/*/src/**/*.ts'],
     rules: {
@@ -61,12 +61,12 @@ export default warden.enforce(...tseslint.config(
   {
     // The Web Storage base store, and the cross-tab logout fallback (a timestamp, no data).
     files: ['packages/csr/storage/src/stores.ts', 'packages/csr/sso/src/channel.ts'],
-    rules: { '@sanaafshani/warden/no-raw-web-storage': 'off' },
+    rules: { '@sanaafshani/warden-csr/no-raw-web-storage': 'off' },
   },
   {
     // Reads the double-submit CSRF cookie, which is meant to be readable and is not a secret.
     files: ['packages/csr/sso/src/bff.ts'],
-    rules: { '@sanaafshani/warden/no-raw-web-storage': 'off' },
+    rules: { '@sanaafshani/warden-csr/no-raw-web-storage': 'off' },
   },
   // A required rule costs a scope and a reason to switch off. These are ours.
   warden.waive({
@@ -88,7 +88,7 @@ export default warden.enforce(...tseslint.config(
     files: ['packages/**/tests/**/*.ts'],
     rules: {
       // Tier `recommended`: a team's call, and ours is that tests may use raw storage.
-      '@sanaafshani/warden/no-raw-web-storage': 'off',
+      '@sanaafshani/warden-csr/no-raw-web-storage': 'off',
       '@typescript-eslint/no-unsafe-assignment': 'off',
       '@typescript-eslint/no-unsafe-member-access': 'off',
     },

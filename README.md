@@ -26,7 +26,7 @@ npm i @sanaafshani/warden-ssr @sanaafshani/warden-ssr-headers @sanaafshani/warde
 npm i @sanaafshani/warden-csr @sanaafshani/warden-csr-storage
 
 # the rules that keep the unsafe APIs out of your code
-npm i -D @sanaafshani/warden-eslint-plugin
+npm i -D @sanaafshani/warden-csr-eslint-plugin
 ```
 
 ```ts
@@ -71,14 +71,15 @@ That buys three things a middleware list cannot:
 | Track | Core | Runs on | Plugins |
 | --- | --- | --- | --- |
 | **SSR** | `@sanaafshani/warden-ssr` | Any Fetch-API server | `headers` `ratelimit` `authn` `csrf` `access` `validate` `logging` `crypto` `ssrf` `upload` |
-| **CSR** | `@sanaafshani/warden-csr` | The browser | `storage` `sanitize` `access` `sso` |
+| **CSR** | `@sanaafshani/warden-csr` | The browser | `storage` `sanitize` `access` `sso` `eslint-plugin` |
 
 Both cores have **zero dependencies** and contain no control of their own —
 they are the contract, and every control is a plugin built on it.
 
 The tracks share no code. An SSR plugin never pulls in browser code and vice
 versa; a lint rule in this repo fails the build if one imports the other.
-`@sanaafshani/warden-eslint-plugin` sits outside both.
+Every package name starts with its track, so `npm ls '@sanaafshani/warden-ssr*'`
+shows exactly what a server installed.
 
 ### Browser composition
 
@@ -132,7 +133,7 @@ is the price list — a scope and a sentence, both greppable, both in the diff.
 | [docs/getting-started.md](docs/getting-started.md) | Install, a first chain, a first store |
 | [docs/ssr.md](docs/ssr.md) | The server contract, recommended order, writing a plugin |
 | [docs/csr.md](docs/csr.md) | The browser contract, composition, writing a plugin |
-| [packages/eslint-plugin](packages/eslint-plugin#readme) | The five rules, the tiers, `enforce` and `waive` |
+| [packages/csr/eslint-plugin](packages/csr/eslint-plugin#readme) | The five rules, the tiers, `enforce` and `waive` |
 | [SECURITY.md](SECURITY.md) | Reporting a vulnerability, and what this library does not cover |
 
 Every package has its own README with the reasoning behind its control.
@@ -156,9 +157,9 @@ most of the value is.
 
 ```
 packages/ssr/<core|plugin>   server track
-packages/csr/<core|plugin>   browser track
-packages/eslint-plugin       lint rules, independent of both
+packages/csr/<core|plugin>   browser track (the lint rules are a CSR plugin)
 docs/                        one document per track
+tests/                       release checks: versions, peer ranges, LICENSE
 ```
 
 ```bash
@@ -167,6 +168,7 @@ npm run build       # tsc -b, every package under its own tsconfig
 npm run typecheck   # sources and tests, resolved to src (no build needed)
 npm run lint        # needs build: ESLint loads the plugin from dist
 npm test            # SSR in Node, CSR in jsdom
+npm run release     # clean build, every check above, then npm publish --workspaces
 ```
 
 Each package's `src` is reachable through the `@sanaafshani/source` export

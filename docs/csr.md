@@ -62,9 +62,15 @@ the result as `session.fetch`.
 | `-sanitize` | `sanitizeHtml` (DOMPurify), Trusted Types, `escapeHtml`, `safeUrl`, `safeCsvCell` | `<SafeHtml>` |
 | `-access` | `permissionSet(granted)` | `<PermissionsProvider>`, `<Can>`, `useCan` |
 | `-sso` | `bffSession`, `withCsrf`, `withSessionRefresh`, `safeReturnTo`, `idleTimeout`, `sessionChannel` | |
+| `-eslint-plugin` (dev) | five rules that ban the sinks the plugins above replace; `enforce`, `waive` | |
 
 React is an optional peer, used only by the `/react` subpaths: a non-React app
 never loads it.
+
+The lint rules are the half a runtime library cannot provide: they stop the
+next `innerHTML` or `localStorage.setItem` from going around these plugins.
+They are a dev dependency with no runtime dependency on the other packages.
+See [its README](../packages/csr/eslint-plugin/README.md) for the rules and tiers.
 
 ## What the browser cannot do
 
