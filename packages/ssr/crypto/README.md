@@ -1,4 +1,4 @@
-# @sanaafshani/warden-ssr-crypto
+# @wardenjs/ssr-crypto
 
 > Part of [warden](https://github.com/SanaAfshani/warden)'s **server track**: security controls as decorators for any
 > Fetch-API handler (Next.js route handlers, Hono, Bun, Deno, Workers). Here *SSR* means
@@ -8,11 +8,11 @@ Field encryption, purpose-bound signatures, and webhook verification. Web
 Crypto only, so it runs on Edge too.
 
 ```bash
-npm i @sanaafshani/warden-ssr @sanaafshani/warden-ssr-crypto
+npm i @wardenjs/ssr @wardenjs/ssr-crypto
 ```
 
 ```ts
-import { cipher, signer, webhook } from '@sanaafshani/warden-ssr-crypto';
+import { cipher, signer, webhook } from '@wardenjs/ssr-crypto';
 
 const fields = cipher({ key: process.env.FIELD_KEY!, version: 'v2', previous: { v1: process.env.FIELD_KEY_V1! } });
 const stored = await fields.encrypt(totpSecret, `totp:${userId}`);

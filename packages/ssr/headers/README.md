@@ -1,4 +1,4 @@
-# @sanaafshani/warden-ssr-headers
+# @wardenjs/ssr-headers
 
 > Part of [warden](https://github.com/SanaAfshani/warden)'s **server track**: security controls as decorators for any
 > Fetch-API handler (Next.js route handlers, Hono, Bun, Deno, Workers). Here *SSR* means
@@ -7,11 +7,11 @@
 Security headers, CSP and CORS.
 
 ```bash
-npm i @sanaafshani/warden-ssr @sanaafshani/warden-ssr-headers
+npm i @wardenjs/ssr @wardenjs/ssr-headers
 ```
 
 ```ts
-import { buildCsp, cors, cspNonce, secureHeaders } from '@sanaafshani/warden-ssr-headers';
+import { buildCsp, cors, cspNonce, secureHeaders } from '@wardenjs/ssr-headers';
 
 // JSON API: the default CSP forbids loading or framing anything.
 const api = chain().use(secureHeaders());

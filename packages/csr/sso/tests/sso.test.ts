@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { decorate, type Fetcher } from '@sanaafshani/warden-csr';
+import { decorate, type Fetcher } from '@wardenjs/csr';
 import { bffSession, idleTimeout, safeReturnTo, sessionChannel, withCsrf, withSessionRefresh } from '../src/index.js';
 
 const here = globalThis.location.origin;

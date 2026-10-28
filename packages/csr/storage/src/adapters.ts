@@ -1,4 +1,4 @@
-import type { KeyValueStore } from '@sanaafshani/warden-csr';
+import type { KeyValueStore } from '@wardenjs/csr';
 
 /** Removes every key the store can see. On a `namespaced` store, only that namespace. Call on logout. */
 export async function clearStore(store: KeyValueStore): Promise<void> {

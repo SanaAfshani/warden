@@ -7,7 +7,7 @@ import {
   type ClientIpOptions,
   type Decorator,
   type SecurityEventHandler,
-} from '@sanaafshani/warden-ssr';
+} from '@wardenjs/ssr';
 
 export interface RateLimitRule {
   limit: number;

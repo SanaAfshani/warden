@@ -1,4 +1,4 @@
-# @sanaafshani/warden-ssr-ratelimit
+# @wardenjs/ssr-ratelimit
 
 > Part of [warden](https://github.com/SanaAfshani/warden)'s **server track**: security controls as decorators for any
 > Fetch-API handler (Next.js route handlers, Hono, Bun, Deno, Workers). Here *SSR* means
@@ -7,11 +7,11 @@
 Sliding-window rate limiting as a decorator.
 
 ```bash
-npm i @sanaafshani/warden-ssr @sanaafshani/warden-ssr-ratelimit
+npm i @wardenjs/ssr @wardenjs/ssr-ratelimit
 ```
 
 ```ts
-import { memoryStore, rateLimiter, upstashStore } from '@sanaafshani/warden-ssr-ratelimit';
+import { memoryStore, rateLimiter, upstashStore } from '@wardenjs/ssr-ratelimit';
 
 const limiter = rateLimiter({
   store: process.env.UPSTASH_URL

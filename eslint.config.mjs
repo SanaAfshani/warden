@@ -2,7 +2,7 @@
 import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import globals from 'globals';
-import warden from '@sanaafshani/warden-csr-eslint-plugin';
+import warden from '@wardenjs/csr-eslint-plugin';
 
 // `enforce` is the OUTERMOST call on purpose: it only inspects what it is
 // handed, so wrapping a fragment would miss a downgrade elsewhere in the array.
@@ -37,7 +37,7 @@ export default warden.enforce(...tseslint.config(
     rules: {
       'no-restricted-imports': ['error', {
         patterns: [
-          { group: ['@sanaafshani/warden-csr', '@sanaafshani/warden-csr-*'], message: 'The SSR track must not depend on the CSR track.' },
+          { group: ['@wardenjs/csr', '@wardenjs/csr-*'], message: 'The SSR track must not depend on the CSR track.' },
           { group: ['react', 'react-dom', 'next', 'next/*'], message: 'SSR plugins are framework-agnostic.' },
         ],
       }],
@@ -49,7 +49,7 @@ export default warden.enforce(...tseslint.config(
     rules: {
       'no-restricted-imports': ['error', {
         patterns: [
-          { group: ['@sanaafshani/warden-ssr', '@sanaafshani/warden-ssr-*'], message: 'The CSR track must not depend on the SSR track.' },
+          { group: ['@wardenjs/ssr', '@wardenjs/ssr-*'], message: 'The CSR track must not depend on the SSR track.' },
           { group: ['react', 'react-dom'], message: 'React belongs in the `/react` subpath, so non-React apps never load it.' },
         ],
       }],
@@ -61,12 +61,12 @@ export default warden.enforce(...tseslint.config(
   {
     // The Web Storage base store, and the cross-tab logout fallback (a timestamp, no data).
     files: ['packages/csr/storage/src/stores.ts', 'packages/csr/sso/src/channel.ts'],
-    rules: { '@sanaafshani/warden-csr/no-raw-web-storage': 'off' },
+    rules: { '@wardenjs/csr/no-raw-web-storage': 'off' },
   },
   {
     // Reads the double-submit CSRF cookie, which is meant to be readable and is not a secret.
     files: ['packages/csr/sso/src/bff.ts'],
-    rules: { '@sanaafshani/warden-csr/no-raw-web-storage': 'off' },
+    rules: { '@wardenjs/csr/no-raw-web-storage': 'off' },
   },
   // A required rule costs a scope and a reason to switch off. These are ours.
   warden.waive({
@@ -88,7 +88,7 @@ export default warden.enforce(...tseslint.config(
     files: ['packages/**/tests/**/*.ts'],
     rules: {
       // Tier `recommended`: a team's call, and ours is that tests may use raw storage.
-      '@sanaafshani/warden-csr/no-raw-web-storage': 'off',
+      '@wardenjs/csr/no-raw-web-storage': 'off',
       '@typescript-eslint/no-unsafe-assignment': 'off',
       '@typescript-eslint/no-unsafe-member-access': 'off',
     },

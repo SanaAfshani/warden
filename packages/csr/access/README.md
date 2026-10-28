@@ -1,4 +1,4 @@
-# @sanaafshani/warden-csr-access
+# @wardenjs/csr-access
 
 > Part of [warden](https://github.com/SanaAfshani/warden)'s **browser track**: security controls for code that runs in the
 > browser. Here *CSR* means *client side*, not client-side rendering. Nothing here is a trust
@@ -6,14 +6,14 @@
 
 Permission-gated UI. **Display only:** the user controls the browser, so
 every permission shown here must be enforced again by the server
-(`@sanaafshani/warden-ssr-access`).
+(`@wardenjs/ssr-access`).
 
 ```bash
-npm i @sanaafshani/warden-csr @sanaafshani/warden-csr-access
+npm i @wardenjs/csr @wardenjs/csr-access
 ```
 
 ```tsx
-import { Can, PermissionsProvider, useCan } from '@sanaafshani/warden-csr-access/react';
+import { Can, PermissionsProvider, useCan } from '@wardenjs/csr-access/react';
 
 <PermissionsProvider granted={session.user?.permissions}>
   <Can permission="post:delete"><DeleteButton /></Can>

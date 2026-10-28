@@ -1,6 +1,6 @@
 # CSR track
 
-`@sanaafshani/warden-csr` is the contract for browser plugins. Like the server
+`@wardenjs/csr` is the contract for browser plugins. Like the server
 core it contains no control and needs no configuration.
 
 ## The contract
@@ -82,7 +82,7 @@ they do not make the browser a trust boundary.
 ## Writing a plugin
 
 1. A package under `packages/csr/<name>`. Peer-depend on
-   `@sanaafshani/warden-csr` only if you use its types.
+   `@wardenjs/csr` only if you use its types.
 2. Export `Decorator<KeyValueStore>`, `Decorator<Fetcher>` or plain functions.
    No module-level configuration; take options.
 3. Fail closed: a value that cannot be verified is absent, never returned.

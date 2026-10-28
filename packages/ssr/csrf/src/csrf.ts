@@ -11,7 +11,7 @@ import {
   toBase64Url,
   type Decorator,
   type SecurityEventHandler,
-} from '@sanaafshani/warden-ssr';
+} from '@wardenjs/ssr';
 
 export interface CsrfOptions {
   /** At least 32 random bytes, distinct from the session secret. Checked on first use. */

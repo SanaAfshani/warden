@@ -1,4 +1,4 @@
-import { HttpError, readBytes } from '@sanaafshani/warden-ssr';
+import { HttpError, readBytes } from '@wardenjs/ssr';
 
 export interface JsonLimits {
   /** Default 100 KB. */

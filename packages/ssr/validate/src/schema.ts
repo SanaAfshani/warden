@@ -1,4 +1,4 @@
-import { HttpError } from '@sanaafshani/warden-ssr';
+import { HttpError } from '@wardenjs/ssr';
 
 /**
  * The Standard Schema interface (standardschema.dev), implemented by Zod

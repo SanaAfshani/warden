@@ -1,4 +1,4 @@
-# @sanaafshani/warden-ssr-csrf
+# @wardenjs/ssr-csrf
 
 > Part of [warden](https://github.com/SanaAfshani/warden)'s **server track**: security controls as decorators for any
 > Fetch-API handler (Next.js route handlers, Hono, Bun, Deno, Workers). Here *SSR* means
@@ -7,11 +7,11 @@
 CSRF protection for cookie-authenticated writes.
 
 ```bash
-npm i @sanaafshani/warden-ssr @sanaafshani/warden-ssr-csrf
+npm i @wardenjs/ssr @wardenjs/ssr-csrf
 ```
 
 ```ts
-import { csrf } from '@sanaafshani/warden-ssr-csrf';
+import { csrf } from '@wardenjs/ssr-csrf';
 
 const guard = csrf({ secret: process.env.CSRF_SECRET!, origin: 'https://app.example.com' });
 

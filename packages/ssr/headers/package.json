@@ -1,10 +1,10 @@
 {
-  "name": "@sanaafshani/warden-ssr-headers",
-  "version": "0.1.1",
+  "name": "@wardenjs/ssr-headers",
+  "version": "0.2.0",
   "description": "Security headers, nonce-based CSP and exact-origin CORS as a decorator for Fetch-API servers.",
   "keywords": [
+    "wardenjs",
     "security",
-    "warden",
     "server",
     "fetch-api",
     "decorator",
@@ -19,6 +19,10 @@
     "hsts",
     "helmet"
   ],
+  "author": {
+    "name": "Sana Afshani",
+    "url": "https://github.com/SanaAfshani"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -31,7 +35,7 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "@sanaafshani/source": "./src/index.ts",
+      "@wardenjs/source": "./src/index.ts",
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
@@ -45,7 +49,7 @@
     "node": ">=22.12.0"
   },
   "peerDependencies": {
-    "@sanaafshani/warden-ssr": "^0.1.1"
+    "@wardenjs/ssr": "^0.2.0"
   },
   "publishConfig": {
     "access": "public"

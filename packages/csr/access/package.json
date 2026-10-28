@@ -1,10 +1,10 @@
 {
-  "name": "@sanaafshani/warden-csr-access",
-  "version": "0.1.1",
+  "name": "@wardenjs/csr-access",
+  "version": "0.2.0",
   "description": "Permission-gated UI for the browser, with React <Can> and useCan. Display only: the server enforces.",
   "keywords": [
+    "wardenjs",
     "security",
-    "warden",
     "browser",
     "client-side",
     "decorator",
@@ -13,6 +13,10 @@
     "rbac",
     "react"
   ],
+  "author": {
+    "name": "Sana Afshani",
+    "url": "https://github.com/SanaAfshani"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -25,12 +29,12 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "@sanaafshani/source": "./src/index.ts",
+      "@wardenjs/source": "./src/index.ts",
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
     "./react": {
-      "@sanaafshani/source": "./src/react.ts",
+      "@wardenjs/source": "./src/react.ts",
       "types": "./dist/react.d.ts",
       "default": "./dist/react.js"
     },
@@ -41,7 +45,7 @@
     "!dist/.tsbuildinfo"
   ],
   "peerDependencies": {
-    "@sanaafshani/warden-csr": "^0.1.1",
+    "@wardenjs/csr": "^0.2.0",
     "react": ">=18.3.0"
   },
   "peerDependenciesMeta": {

@@ -1,4 +1,4 @@
-# @sanaafshani/warden-ssr-authn
+# @wardenjs/ssr-authn
 
 > Part of [warden](https://github.com/SanaAfshani/warden)'s **server track**: security controls as decorators for any
 > Fetch-API handler (Next.js route handlers, Hono, Bun, Deno, Workers). Here *SSR* means
@@ -8,12 +8,12 @@ Who is calling: signed sessions, a generic authentication decorator,
 password policy, lockout, and scrypt hashing.
 
 ```bash
-npm i @sanaafshani/warden-ssr @sanaafshani/warden-ssr-authn jose
+npm i @wardenjs/ssr @wardenjs/ssr-authn jose
 ```
 
 ```ts
-import { authenticate, lockout, sessions } from '@sanaafshani/warden-ssr-authn';
-import { passwordHasher } from '@sanaafshani/warden-ssr-authn/node';
+import { authenticate, lockout, sessions } from '@wardenjs/ssr-authn';
+import { passwordHasher } from '@wardenjs/ssr-authn/node';
 
 // Your own sessions (JWT in a __Host- cookie):
 const session = sessions({ secret: process.env.SESSION_SECRET!, issuer: 'https://app.example.com' });

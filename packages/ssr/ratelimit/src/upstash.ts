@@ -1,4 +1,4 @@
-import { emit, type SecurityEventHandler } from '@sanaafshani/warden-ssr';
+import { emit, type SecurityEventHandler } from '@wardenjs/ssr';
 import type { RateLimitStore } from './limiter.js';
 
 export interface UpstashStoreOptions {

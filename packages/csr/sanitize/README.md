@@ -1,4 +1,4 @@
-# @sanaafshani/warden-csr-sanitize
+# @wardenjs/csr-sanitize
 
 > Part of [warden](https://github.com/SanaAfshani/warden)'s **browser track**: security controls for code that runs in the
 > browser. Here *CSR* means *client side*, not client-side rendering. Nothing here is a trust
@@ -8,12 +8,12 @@ Rendering untrusted content: HTML sanitising, Trusted Types, and escaping
 for each sink.
 
 ```bash
-npm i @sanaafshani/warden-csr-sanitize dompurify   # dompurify only if you sanitise HTML
+npm i @wardenjs/csr-sanitize dompurify   # dompurify only if you sanitise HTML
 ```
 
 ```tsx
-import { installTrustedTypes, preloadSanitizer, safeUrl } from '@sanaafshani/warden-csr-sanitize';
-import { SafeHtml } from '@sanaafshani/warden-csr-sanitize/react';
+import { installTrustedTypes, preloadSanitizer, safeUrl } from '@wardenjs/csr-sanitize';
+import { SafeHtml } from '@wardenjs/csr-sanitize/react';
 
 await preloadSanitizer();   // at startup: sync rendering, no flash
 installTrustedTypes();      // with CSP require-trusted-types-for 'script'

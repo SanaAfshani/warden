@@ -1,4 +1,4 @@
-import { decorate, emit, type Fetcher, type SecurityEventHandler } from '@sanaafshani/warden-csr';
+import { decorate, emit, type Fetcher, type SecurityEventHandler } from '@wardenjs/csr';
 import { sessionChannel, type SessionChannel } from './channel.js';
 import { withCsrf, withSessionRefresh } from './fetch.js';
 import { safeReturnTo } from './return-to.js';

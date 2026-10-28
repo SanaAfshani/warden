@@ -1,4 +1,4 @@
-# @sanaafshani/warden-csr-sso
+# @wardenjs/csr-sso
 
 > Part of [warden](https://github.com/SanaAfshani/warden)'s **browser track**: security controls for code that runs in the
 > browser. Here *CSR* means *client side*, not client-side rendering. Nothing here is a trust
@@ -9,11 +9,11 @@ OIDC flow and keeps the tokens; the browser holds only an httpOnly cookie.
 XSS can then act while the tab is open, but cannot take a token home.
 
 ```bash
-npm i @sanaafshani/warden-csr @sanaafshani/warden-csr-sso
+npm i @wardenjs/csr @wardenjs/csr-sso
 ```
 
 ```ts
-import { bffSession, currentReturnTo, idleTimeout } from '@sanaafshani/warden-csr-sso';
+import { bffSession, currentReturnTo, idleTimeout } from '@wardenjs/csr-sso';
 
 export const session = bffSession<User>({
   endpoints: { login: '/auth/login', logout: '/auth/logout', session: '/auth/session', refresh: '/auth/refresh' },

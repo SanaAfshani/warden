@@ -1,4 +1,4 @@
-import type { Permission } from '@sanaafshani/warden-csr';
+import type { Permission } from '@wardenjs/csr';
 
 /**
  * What the UI shows, never what is allowed: the user owns the browser and

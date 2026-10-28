@@ -1,7 +1,7 @@
 {
   "name": "warden",
   "private": true,
-  "description": "Security controls as decorators, in two independent tracks: @sanaafshani/warden-csr-* for the browser, @sanaafshani/warden-ssr-* for Fetch-API servers.",
+  "description": "Security controls as decorators, in two independent tracks: @wardenjs/csr-* for the browser, @wardenjs/ssr-* for Fetch-API servers.",
   "license": "MIT",
   "author": "Sana Afshani",
   "repository": { "type": "git", "url": "git+https://github.com/SanaAfshani/warden.git" },

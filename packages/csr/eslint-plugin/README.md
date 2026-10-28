@@ -1,4 +1,4 @@
-# @sanaafshani/warden-csr-eslint-plugin
+# @wardenjs/csr-eslint-plugin
 
 > Part of [warden](https://github.com/SanaAfshani/warden)'s **browser track**: security controls for code that runs in the
 > browser. Here *CSR* means *client side*, not client-side rendering. Nothing here is a trust
@@ -8,15 +8,15 @@ Five ESLint rules that keep client-side security controls switched on, three of
 them tier `required` — they stay errors unless you waive them on the record.
 It has no runtime dependency on the other CSR packages: the names it suggests
 (`SafeHtml`, `safeUrl`, an `encrypted()` store) are theirs by default and
-configurable per rule. Rule ids are `@sanaafshani/warden-csr/<rule>`.
+configurable per rule. Rule ids are `@wardenjs/csr/<rule>`.
 
 ```bash
-npm i -D @sanaafshani/warden-csr-eslint-plugin
+npm i -D @wardenjs/csr-eslint-plugin
 ```
 
 ```js
 // eslint.config.mjs
-import warden from '@sanaafshani/warden-csr-eslint-plugin';
+import warden from '@wardenjs/csr-eslint-plugin';
 
 export default [
   // ...your config
@@ -159,7 +159,7 @@ you hunting for why your `'off'` did nothing.
 
 ```js
 // eslint.config.mjs
-import warden from '@sanaafshani/warden-csr-eslint-plugin';
+import warden from '@wardenjs/csr-eslint-plugin';
 
 export default warden.enforce(            // outermost: it sees only what it is given
   { ...warden.configs.recommended, files: ['src/**/*.ts'] },

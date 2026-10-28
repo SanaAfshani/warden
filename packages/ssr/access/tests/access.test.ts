@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { chain, defineDecorator, HttpError, type Principal } from '@sanaafshani/warden-ssr';
+import { chain, defineDecorator, HttpError, type Principal } from '@wardenjs/ssr';
 import { accessControl } from '../src/index.js';
 
 const ac = accessControl({

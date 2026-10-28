@@ -1,4 +1,4 @@
-# @sanaafshani/warden-ssr-ssrf
+# @wardenjs/ssr-ssrf
 
 > Part of [warden](https://github.com/SanaAfshani/warden)'s **server track**: security controls as decorators for any
 > Fetch-API handler (Next.js route handlers, Hono, Bun, Deno, Workers). Here *SSR* means
@@ -8,11 +8,11 @@ Outbound HTTP to URLs that input can influence, without reaching your
 internal network. **Node only** (needs `node:dns` and `node:https`).
 
 ```bash
-npm i @sanaafshani/warden-ssr @sanaafshani/warden-ssr-ssrf
+npm i @wardenjs/ssr @wardenjs/ssr-ssrf
 ```
 
 ```ts
-import { createSafeFetch } from '@sanaafshani/warden-ssr-ssrf';
+import { createSafeFetch } from '@wardenjs/ssr-ssrf';
 
 const safeFetch = createSafeFetch({ allowedHosts: ['api.partner.com', '.cdn.partner.com'] });
 const { status, body } = await safeFetch(userSuppliedUrl);

@@ -1,7 +1,7 @@
 /**
  * The application's vocabulary for the browser track, declared once:
  *
- *   declare module '@sanaafshani/warden-csr' {
+ *   declare module '@wardenjs/csr' {
  *     interface SecurityRegistry {
  *       permission: 'post:create' | 'post:delete';
  *     }

@@ -4,7 +4,7 @@
  * `message` and `details` are sent to the client, so they must be written by
  * the server, never copied from input or from another error. Anything that is
  * not an `HttpError` is a bug and is not turned into a response here; that is
- * left to an error boundary (see `@sanaafshani/warden-ssr-logging`) or the
+ * left to an error boundary (see `@wardenjs/ssr-logging`) or the
  * framework, both of which answer with an opaque 500.
  */
 export class HttpError extends Error {

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { chain } from '@sanaafshani/warden-ssr';
+import { chain } from '@wardenjs/ssr';
 import { memoryStore, rateLimiter } from '../src/index.js';
 
 const fromIp = (ip: string) => new Request('https://api.test/login', { headers: { 'x-forwarded-for': ip } });

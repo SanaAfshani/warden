@@ -1,5 +1,5 @@
 /**
- * Same shape as `RateLimitStore` from `@sanaafshani/warden-ssr-ratelimit`, so
+ * Same shape as `RateLimitStore` from `@wardenjs/ssr-ratelimit`, so
  * those stores work here; declared locally so authn does not depend on it.
  * Must be shared across instances, or each instance has its own budget.
  */

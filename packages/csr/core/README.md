@@ -1,4 +1,4 @@
-# @sanaafshani/warden-csr
+# @wardenjs/csr
 
 > Part of [warden](https://github.com/SanaAfshani/warden)'s **browser track**: security controls for code that runs in the
 > browser. Here *CSR* means *client side*, not client-side rendering. Nothing here is a trust
@@ -8,11 +8,11 @@ The contract browser plugins build on. No controls, no configuration, no
 dependencies.
 
 ```bash
-npm i @sanaafshani/warden-csr
+npm i @wardenjs/csr
 ```
 
 ```ts
-import { decorate, type Decorator, type KeyValueStore } from '@sanaafshani/warden-csr';
+import { decorate, type Decorator, type KeyValueStore } from '@wardenjs/csr';
 
 const logged: Decorator<KeyValueStore> = (inner) => ({
   ...inner,

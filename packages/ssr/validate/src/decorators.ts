@@ -1,4 +1,4 @@
-import { defineDecorator, type BaseContext, type Decorator } from '@sanaafshani/warden-ssr';
+import { defineDecorator, type BaseContext, type Decorator } from '@wardenjs/ssr';
 import { readJson, searchParamsRecord, type JsonLimits } from './read.js';
 import { parse, type Infer, type StandardSchema } from './schema.js';
 

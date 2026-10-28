@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { chain, HttpError } from '@sanaafshani/warden-ssr';
+import { chain, HttpError } from '@wardenjs/ssr';
 import { buildCsp, cors, secureHeaders } from '../src/index.js';
 
 const request = (init: RequestInit & { headers?: Record<string, string> } = {}) => new Request('https://api.test/x', init);

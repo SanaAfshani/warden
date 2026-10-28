@@ -2,11 +2,11 @@ import { defineConfig } from 'vitest/config';
 
 // Workspace imports resolve to source, so tests need no build. Listing
 // conditions replaces Vite's defaults, hence the defaults are repeated.
-const conditions = (platform: 'browser' | 'node') => ['@sanaafshani/source', 'module', platform, 'development|production'];
+const conditions = (platform: 'browser' | 'node') => ['@wardenjs/source', 'module', platform, 'development|production'];
 
 export default defineConfig({
   resolve: { conditions: conditions('browser') },
-  ssr: { resolve: { conditions: conditions('node'), externalConditions: ['@sanaafshani/source'] } },
+  ssr: { resolve: { conditions: conditions('node'), externalConditions: ['@wardenjs/source'] } },
   test: {
     projects: [
       // Server code is tested without a DOM: a server module that reaches for

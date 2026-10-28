@@ -26,7 +26,7 @@ const rules = {
 };
 
 /** The namespace a consumer's config must use to address these rules. */
-export const NAMESPACE = '@sanaafshani/warden-csr';
+export const NAMESPACE = '@wardenjs/csr';
 
 const id = (name: string) => `${NAMESPACE}/${name}`;
 
@@ -59,7 +59,7 @@ function configure(
 }
 
 const plugin = {
-  meta: { name: '@sanaafshani/warden-csr-eslint-plugin', version: '0.1.1' },
+  meta: { name: '@wardenjs/csr-eslint-plugin', version: '0.2.0' },
   rules,
 } satisfies ESLint.Plugin;
 
@@ -96,7 +96,7 @@ export interface Downgrade {
 }
 
 export interface Waiver {
-  /** Rule name, with or without the `@sanaafshani/warden-csr/` prefix. */
+  /** Rule name, with or without the `@wardenjs/csr/` prefix. */
   rule: string;
   /** The files this covers. A waiver with no scope is not a waiver. */
   files: readonly string[];

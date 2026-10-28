@@ -1,4 +1,4 @@
-import { emit, type KeyValueStore, type SecurityEventHandler } from '@sanaafshani/warden-csr';
+import { emit, type KeyValueStore, type SecurityEventHandler } from '@wardenjs/csr';
 
 /** Lives as long as the tab; never touches disk; invisible to other tabs. The most private choice. */
 export function memoryStore(): KeyValueStore {

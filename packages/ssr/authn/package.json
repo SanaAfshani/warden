@@ -1,10 +1,10 @@
 {
-  "name": "@sanaafshani/warden-ssr-authn",
-  "version": "0.1.1",
+  "name": "@wardenjs/ssr-authn",
+  "version": "0.2.0",
   "description": "Authentication for Fetch-API servers: signed JWT session cookies, a provider-agnostic auth decorator, password policy, lockout and scrypt hashing.",
   "keywords": [
+    "wardenjs",
     "security",
-    "warden",
     "server",
     "fetch-api",
     "decorator",
@@ -20,6 +20,10 @@
     "scrypt",
     "lockout"
   ],
+  "author": {
+    "name": "Sana Afshani",
+    "url": "https://github.com/SanaAfshani"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -32,12 +36,12 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "@sanaafshani/source": "./src/index.ts",
+      "@wardenjs/source": "./src/index.ts",
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
     "./node": {
-      "@sanaafshani/source": "./src/node.ts",
+      "@wardenjs/source": "./src/node.ts",
       "types": "./dist/node.d.ts",
       "default": "./dist/node.js"
     },
@@ -51,7 +55,7 @@
     "node": ">=22.12.0"
   },
   "peerDependencies": {
-    "@sanaafshani/warden-ssr": "^0.1.1",
+    "@wardenjs/ssr": "^0.2.0",
     "jose": "^6.0.0"
   },
   "publishConfig": {

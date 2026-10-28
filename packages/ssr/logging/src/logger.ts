@@ -3,7 +3,7 @@ import {
   type ClientIpOptions,
   type SecurityEvent,
   type SecurityEventHandler,
-} from '@sanaafshani/warden-ssr';
+} from '@wardenjs/ssr';
 
 export type LogLevel = 'debug' | 'info' | 'warn' | 'error';
 export type LogFields = Record<string, unknown>;

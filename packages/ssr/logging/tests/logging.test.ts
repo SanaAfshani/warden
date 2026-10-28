@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { chain, HttpError } from '@sanaafshani/warden-ssr';
+import { chain, HttpError } from '@wardenjs/ssr';
 import { clientIpForLog, createLogger, requestLogger, type LogRecord } from '../src/index.js';
 
 const capture = () => {

@@ -1,4 +1,4 @@
-import { defineDecorator, withHeaders, type Decorator } from '@sanaafshani/warden-ssr';
+import { defineDecorator, withHeaders, type Decorator } from '@wardenjs/ssr';
 import { mergeVary } from './headers.js';
 
 export interface CorsOptions {

@@ -1,16 +1,20 @@
 {
-  "name": "@sanaafshani/warden-csr",
-  "version": "0.1.1",
+  "name": "@wardenjs/csr",
+  "version": "0.2.0",
   "description": "Browser-side security as composable decorators: decorate() plus the KeyValueStore and Fetcher contracts. Zero dependencies.",
   "keywords": [
+    "wardenjs",
     "security",
-    "warden",
     "browser",
     "client-side",
     "decorator",
     "typescript",
     "owasp"
   ],
+  "author": {
+    "name": "Sana Afshani",
+    "url": "https://github.com/SanaAfshani"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -23,7 +27,7 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "@sanaafshani/source": "./src/index.ts",
+      "@wardenjs/source": "./src/index.ts",
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },

@@ -1,10 +1,10 @@
 {
-  "name": "@sanaafshani/warden-csr-sanitize",
-  "version": "0.1.1",
+  "name": "@wardenjs/csr-sanitize",
+  "version": "0.2.0",
   "description": "XSS defence for the browser: DOMPurify HTML sanitising, Trusted Types, context-specific escaping and safe URLs, plus React <SafeHtml>.",
   "keywords": [
+    "wardenjs",
     "security",
-    "warden",
     "browser",
     "client-side",
     "decorator",
@@ -15,6 +15,10 @@
     "escape-html",
     "react"
   ],
+  "author": {
+    "name": "Sana Afshani",
+    "url": "https://github.com/SanaAfshani"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -27,12 +31,12 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "@sanaafshani/source": "./src/index.ts",
+      "@wardenjs/source": "./src/index.ts",
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
     "./react": {
-      "@sanaafshani/source": "./src/react.ts",
+      "@wardenjs/source": "./src/react.ts",
       "types": "./dist/react.d.ts",
       "default": "./dist/react.js"
     },

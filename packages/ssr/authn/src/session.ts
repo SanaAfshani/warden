@@ -12,7 +12,7 @@ import {
   type Principal,
   type Role,
   type SecurityEventHandler,
-} from '@sanaafshani/warden-ssr';
+} from '@wardenjs/ssr';
 import { unauthenticated } from './authenticate.js';
 
 /**

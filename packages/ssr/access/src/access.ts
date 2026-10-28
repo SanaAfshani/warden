@@ -7,7 +7,7 @@ import {
   type Principal,
   type Role,
   type SecurityEventHandler,
-} from '@sanaafshani/warden-ssr';
+} from '@wardenjs/ssr';
 
 export interface AccessControlOptions {
   /** Least to most privileged; the order is what `canAssignRole` ranks by. */

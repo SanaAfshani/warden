@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { chain } from '@sanaafshani/warden-ssr';
+import { chain } from '@wardenjs/ssr';
 import { sessions } from '../src/index.js';
 
 const secret = 'k9$Lm2#Qp7@Zx4!Rt8&Wv1^Ny6*Bc3%Hd5';

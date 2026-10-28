@@ -1,7 +1,7 @@
 /**
  * The application's vocabulary, declared once by module augmentation:
  *
- *   declare module '@sanaafshani/warden-ssr' {
+ *   declare module '@wardenjs/ssr' {
  *     interface SecurityRegistry {
  *       role: 'user' | 'admin';
  *       permission: 'order:read:own' | 'order:read:any';

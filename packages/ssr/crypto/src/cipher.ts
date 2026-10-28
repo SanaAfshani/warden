@@ -1,4 +1,4 @@
-import { assertStrongSecret, fromBase64Url, randomBytes, toBase64Url } from '@sanaafshani/warden-ssr';
+import { assertStrongSecret, fromBase64Url, randomBytes, toBase64Url } from '@wardenjs/ssr';
 
 export interface CipherOptions {
   /** At least 32 random bytes. */

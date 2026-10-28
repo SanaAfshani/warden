@@ -6,7 +6,7 @@ import {
   readBytes,
   type Decorator,
   type SecurityEventHandler,
-} from '@sanaafshani/warden-ssr';
+} from '@wardenjs/ssr';
 
 export interface VerifyWebhookInput {
   /** The secret the provider gave you, used as-is (no derivation). */

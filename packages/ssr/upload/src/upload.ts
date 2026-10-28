@@ -6,7 +6,7 @@ import {
   readBytes,
   type Decorator,
   type SecurityEventHandler,
-} from '@sanaafshani/warden-ssr';
+} from '@wardenjs/ssr';
 
 interface Signature {
   mime: string;

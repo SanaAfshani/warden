@@ -1,4 +1,4 @@
-# @sanaafshani/warden-ssr-upload
+# @wardenjs/ssr-upload
 
 > Part of [warden](https://github.com/SanaAfshani/warden)'s **server track**: security controls as decorators for any
 > Fetch-API handler (Next.js route handlers, Hono, Bun, Deno, Workers). Here *SSR* means
@@ -7,11 +7,11 @@
 File upload checks by content, not by what the client claims.
 
 ```bash
-npm i @sanaafshani/warden-ssr @sanaafshani/warden-ssr-upload
+npm i @wardenjs/ssr @wardenjs/ssr-upload
 ```
 
 ```ts
-import { upload } from '@sanaafshani/warden-ssr-upload';
+import { upload } from '@wardenjs/ssr-upload';
 
 export const POST = chain()
   .use(session.required())

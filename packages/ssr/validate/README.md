@@ -1,4 +1,4 @@
-# @sanaafshani/warden-ssr-validate
+# @wardenjs/ssr-validate
 
 > Part of [warden](https://github.com/SanaAfshani/warden)'s **server track**: security controls as decorators for any
 > Fetch-API handler (Next.js route handlers, Hono, Bun, Deno, Workers). Here *SSR* means
@@ -9,12 +9,12 @@ Bounded body reading and schema validation. Works with any
 without depending on one.
 
 ```bash
-npm i @sanaafshani/warden-ssr @sanaafshani/warden-ssr-validate
+npm i @wardenjs/ssr @wardenjs/ssr-validate
 ```
 
 ```ts
 import { z } from 'zod';
-import { body, params, query } from '@sanaafshani/warden-ssr-validate';
+import { body, params, query } from '@wardenjs/ssr-validate';
 
 export const PATCH = chain()
   .use(params(z.object({ id: z.string().uuid() })))

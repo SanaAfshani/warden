@@ -1,4 +1,4 @@
-import { randomToken } from '@sanaafshani/warden-ssr';
+import { randomToken } from '@wardenjs/ssr';
 
 /** Fresh per response; a reused nonce is a published password for script injection. */
 export function cspNonce(): string {

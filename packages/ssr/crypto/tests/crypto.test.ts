@@ -1,6 +1,6 @@
 import { createHmac } from 'node:crypto';
 import { describe, expect, it } from 'vitest';
-import { chain } from '@sanaafshani/warden-ssr';
+import { chain } from '@wardenjs/ssr';
 import { cipher, DecryptionError, signer, verifyWebhook, webhook } from '../src/index.js';
 
 const key = 'k9$Lm2#Qp7@Zx4!Rt8&Wv1^Ny6*Bc3%Hd5';

@@ -1,10 +1,10 @@
 {
-  "name": "@sanaafshani/warden-csr-sso",
-  "version": "0.1.1",
+  "name": "@wardenjs/csr-sso",
+  "version": "0.2.0",
   "description": "Browser client for backend-for-frontend (BFF) sessions: CSRF and token-refresh fetch decorators, safe returnTo, idle timeout, cross-tab logout.",
   "keywords": [
+    "wardenjs",
     "security",
-    "warden",
     "browser",
     "client-side",
     "decorator",
@@ -17,6 +17,10 @@
     "idle-timeout",
     "logout"
   ],
+  "author": {
+    "name": "Sana Afshani",
+    "url": "https://github.com/SanaAfshani"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -29,7 +33,7 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "@sanaafshani/source": "./src/index.ts",
+      "@wardenjs/source": "./src/index.ts",
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
@@ -40,7 +44,7 @@
     "!dist/.tsbuildinfo"
   ],
   "peerDependencies": {
-    "@sanaafshani/warden-csr": "^0.1.1"
+    "@wardenjs/csr": "^0.2.0"
   },
   "publishConfig": {
     "access": "public"

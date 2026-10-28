@@ -1,5 +1,5 @@
 import { createContext, createElement, useContext, useMemo, type ReactNode } from 'react';
-import type { Permission } from '@sanaafshani/warden-csr';
+import type { Permission } from '@wardenjs/csr';
 import { permissionSet, type Permissions } from './permissions.js';
 
 const Context = createContext<Permissions>(permissionSet(null));

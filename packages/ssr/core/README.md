@@ -1,4 +1,4 @@
-# @sanaafshani/warden-ssr
+# @wardenjs/ssr
 
 > Part of [warden](https://github.com/SanaAfshani/warden)'s **server track**: security controls as decorators for any
 > Fetch-API handler (Next.js route handlers, Hono, Bun, Deno, Workers). Here *SSR* means
@@ -9,11 +9,11 @@ The contract every SSR plugin builds on: `Handler`, `Decorator`, `chain()`,
 configuration, no dependencies.
 
 ```bash
-npm i @sanaafshani/warden-ssr
+npm i @wardenjs/ssr
 ```
 
 ```ts
-import { chain, defineDecorator, HttpError } from '@sanaafshani/warden-ssr';
+import { chain, defineDecorator, HttpError } from '@wardenjs/ssr';
 
 const requireJson = defineDecorator('requireJson', (request, _context, next) =>
   request.headers.get('accept')?.includes('application/json')

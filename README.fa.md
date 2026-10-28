@@ -24,13 +24,13 @@ core هر track را نصب می‌کنید به‌علاوهٔ فقط پلاگ�
 
 ```bash
 # سرور
-npm i @sanaafshani/warden-ssr @sanaafshani/warden-ssr-headers @sanaafshani/warden-ssr-authn
+npm i @wardenjs/ssr @wardenjs/ssr-headers @wardenjs/ssr-authn
 
 # مرورگر
-npm i @sanaafshani/warden-csr @sanaafshani/warden-csr-storage
+npm i @wardenjs/csr @wardenjs/csr-storage
 
 # قوانینی که APIهای ناامن را از کدتان بیرون نگه می‌دارند
-npm i -D @sanaafshani/warden-csr-eslint-plugin
+npm i -D @wardenjs/csr-eslint-plugin
 ```
 
 ```ts
@@ -81,8 +81,8 @@ export const POST = chain()
 
 | Track | Core | اجرا روی | پلاگین‌ها |
 | --- | --- | --- | --- |
-| **SSR** | `@sanaafshani/warden-ssr` | هر سرور Fetch-API | `headers` `ratelimit` `authn` `csrf` `access` `validate` `logging` `crypto` `ssrf` `upload` |
-| **CSR** | `@sanaafshani/warden-csr` | مرورگر | `storage` `sanitize` `access` `sso` `eslint-plugin` |
+| **SSR** | `@wardenjs/ssr` | هر سرور Fetch-API | `headers` `ratelimit` `authn` `csrf` `access` `validate` `logging` `crypto` `ssrf` `upload` |
+| **CSR** | `@wardenjs/csr` | مرورگر | `storage` `sanitize` `access` `sso` `eslint-plugin` |
 
 <div dir="rtl">
 
@@ -91,7 +91,7 @@ export const POST = chain()
 
 دو track هیچ کدی به اشتراک نمی‌گذارند. پلاگین SSR هرگز کد مرورگر را
 نمی‌کشد و برعکس؛ یک قانون lint در همین مخزن اگر یکی دیگری را import کند build
-را می‌اندازد. نام هر پکیج با track خودش شروع می‌شود، پس `npm ls '@sanaafshani/warden-ssr*'`
+را می‌اندازد. نام هر پکیج با track خودش شروع می‌شود، پس `npm ls '@wardenjs/ssr*'`
 دقیقاً نشان می‌دهد سرور چه نصب کرده است.
 
 ### ترکیب در مرورگر
@@ -201,7 +201,7 @@ npm run release     # build تمیز، همهٔ بررسی‌های بالا، �
 
 <div dir="rtl">
 
-`src` هر پکیج از طریق export condition به نام `@sanaafshani/source` در دسترس
+`src` هر پکیج از طریق export condition به نام `@wardenjs/source` در دسترس
 است، که TypeScript (با `customConditions`) و Vitest از آن استفاده می‌کنند؛ پس
 تست و typecheck هرگز روی خروجی `dist` کهنه اجرا نمی‌شوند. مصرف‌کنندهٔ منتشرشده
 هرگز این condition را نمی‌بیند.

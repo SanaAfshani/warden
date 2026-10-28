@@ -1,10 +1,10 @@
 {
-  "name": "@sanaafshani/warden-ssr-logging",
-  "version": "0.1.1",
+  "name": "@wardenjs/ssr-logging",
+  "version": "0.2.0",
   "description": "Security logging for Fetch-API servers: a redacting JSON logger, a security-event sink and an error boundary that hides internals.",
   "keywords": [
+    "wardenjs",
     "security",
-    "warden",
     "server",
     "fetch-api",
     "decorator",
@@ -18,6 +18,10 @@
     "redaction",
     "error-handling"
   ],
+  "author": {
+    "name": "Sana Afshani",
+    "url": "https://github.com/SanaAfshani"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -30,7 +34,7 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "@sanaafshani/source": "./src/index.ts",
+      "@wardenjs/source": "./src/index.ts",
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
@@ -44,7 +48,7 @@
     "node": ">=22.12.0"
   },
   "peerDependencies": {
-    "@sanaafshani/warden-ssr": "^0.1.1"
+    "@wardenjs/ssr": "^0.2.0"
   },
   "publishConfig": {
     "access": "public"

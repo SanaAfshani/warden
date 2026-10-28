@@ -6,7 +6,7 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
-import plugin from '@sanaafshani/warden-csr-eslint-plugin';
+import plugin from '@wardenjs/csr-eslint-plugin';
 
 const root = join(import.meta.dirname, '..');
 const dirs = ['ssr', 'csr'].flatMap((track) =>
@@ -17,6 +17,8 @@ const manifests = dirs.map((dir) => ({
   pkg: JSON.parse(readFileSync(join(dir, 'package.json'), 'utf8')) as {
     name: string;
     version: string;
+    author?: { name?: string };
+    repository?: { directory?: string };
     peerDependencies?: Record<string, string>;
   },
 }));
@@ -26,7 +28,15 @@ describe('release', () => {
   it('names every package after its track', () => {
     for (const { dir, pkg } of manifests) {
       const track = dir.includes('/packages/ssr/') ? 'ssr' : 'csr';
-      expect(pkg.name, dir).toMatch(new RegExp(`^@sanaafshani/warden-${track}(-|$)`));
+      expect(pkg.name, dir).toMatch(new RegExp(`^@wardenjs/${track}(-|$)`));
+    }
+  });
+
+  // The npm page links to the folder named here, so a moved package must update it.
+  it('credits the author and points the repository at the package folder', () => {
+    for (const { dir, pkg } of manifests) {
+      expect(pkg.author?.name, pkg.name).toBe('Sana Afshani');
+      expect(pkg.repository?.directory, pkg.name).toBe(dir.slice(root.length + 1));
     }
   });
 
@@ -39,7 +49,7 @@ describe('release', () => {
   it('peers every plugin on the current version of its core', () => {
     for (const { pkg } of manifests) {
       for (const [name, range] of Object.entries(pkg.peerDependencies ?? {})) {
-        if (name.startsWith('@sanaafshani/')) expect(range, `${pkg.name} → ${name}`).toBe(`^${version}`);
+        if (name.startsWith('@wardenjs/')) expect(range, `${pkg.name} → ${name}`).toBe(`^${version}`);
       }
     }
   });

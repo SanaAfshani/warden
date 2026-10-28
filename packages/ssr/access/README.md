@@ -1,4 +1,4 @@
-# @sanaafshani/warden-ssr-access
+# @wardenjs/ssr-access
 
 > Part of [warden](https://github.com/SanaAfshani/warden)'s **server track**: security controls as decorators for any
 > Fetch-API handler (Next.js route handlers, Hono, Bun, Deno, Workers). Here *SSR* means
@@ -7,11 +7,11 @@
 Role-based access control and ownership checks.
 
 ```bash
-npm i @sanaafshani/warden-ssr @sanaafshani/warden-ssr-access
+npm i @wardenjs/ssr @wardenjs/ssr-access
 ```
 
 ```ts
-import { accessControl } from '@sanaafshani/warden-ssr-access';
+import { accessControl } from '@wardenjs/ssr-access';
 
 export const access = accessControl({
   roles: ['user', 'moderator', 'admin'], // least to most privileged

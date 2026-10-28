@@ -5,7 +5,7 @@ import {
   type Decorator,
   type Principal,
   type SecurityEventHandler,
-} from '@sanaafshani/warden-ssr';
+} from '@wardenjs/ssr';
 
 /** Who is calling, or null. Wrap any provider: Auth.js, Clerk, API keys, mTLS headers. */
 export type PrincipalResolver = (request: Request) => Principal | null | Promise<Principal | null>;

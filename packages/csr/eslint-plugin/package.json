@@ -1,18 +1,22 @@
 {
-  "name": "@sanaafshani/warden-csr-eslint-plugin",
-  "version": "0.1.1",
+  "name": "@wardenjs/csr-eslint-plugin",
+  "version": "0.2.0",
   "description": "ESLint rules for browser security: no innerHTML or dangerouslySetInnerHTML, no unencrypted web storage, no unchecked URLs or unsafe target=_blank.",
   "keywords": [
+    "wardenjs",
     "eslint",
     "eslintplugin",
     "eslint-plugin",
     "security",
-    "warden",
     "browser",
     "xss",
     "trusted-types",
     "react"
   ],
+  "author": {
+    "name": "Sana Afshani",
+    "url": "https://github.com/SanaAfshani"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -25,7 +29,7 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "@sanaafshani/source": "./src/index.ts",
+      "@wardenjs/source": "./src/index.ts",
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },

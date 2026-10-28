@@ -1,6 +1,6 @@
 # SSR track
 
-`@sanaafshani/warden-ssr` is the contract; every control is a plugin package
+`@wardenjs/ssr` is the contract; every control is a plugin package
 built on it. The core contains no control of its own and needs no
 configuration, secret or environment variable.
 
@@ -97,7 +97,7 @@ Plugins never log or call home. Each takes an optional `onEvent`; pass
 Roles, permissions and the principal shape are yours. Declare them once:
 
 ```ts
-declare module '@sanaafshani/warden-ssr' {
+declare module '@wardenjs/ssr' {
   interface SecurityRegistry {
     role: 'user' | 'admin';
     permission: 'post:create' | 'post:delete';
@@ -110,7 +110,7 @@ After that, `access.require('post:craete')` is a compile error.
 
 ## Writing a plugin
 
-1. A package under `packages/ssr/<name>` that peer-depends on `@sanaafshani/warden-ssr`.
+1. A package under `packages/ssr/<name>` that peer-depends on `@wardenjs/ssr`.
 2. Export factories that return `Decorator`s. Take options; read no
    environment variables and keep no module-level state.
 3. Validate secrets lazily (`assertStrongSecret` on first use), so a build

@@ -1,4 +1,4 @@
-import type { Decorator, Fetcher } from '@sanaafshani/warden-csr';
+import type { Decorator, Fetcher } from '@wardenjs/csr';
 
 const SAFE_METHODS = new Set(['GET', 'HEAD', 'OPTIONS']);
 

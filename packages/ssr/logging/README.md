@@ -1,4 +1,4 @@
-# @sanaafshani/warden-ssr-logging
+# @wardenjs/ssr-logging
 
 > Part of [warden](https://github.com/SanaAfshani/warden)'s **server track**: security controls as decorators for any
 > Fetch-API handler (Next.js route handlers, Hono, Bun, Deno, Workers). Here *SSR* means
@@ -7,11 +7,11 @@
 Structured logging with redaction, and the request-level error boundary.
 
 ```bash
-npm i @sanaafshani/warden-ssr @sanaafshani/warden-ssr-logging
+npm i @wardenjs/ssr @wardenjs/ssr-logging
 ```
 
 ```ts
-import { createLogger, requestLogger } from '@sanaafshani/warden-ssr-logging';
+import { createLogger, requestLogger } from '@wardenjs/ssr-logging';
 
 export const logger = createLogger({ fields: { service: 'api' } });
 

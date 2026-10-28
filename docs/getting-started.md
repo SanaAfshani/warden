@@ -11,10 +11,10 @@ shares the one copy of the core your app has; a plugin built for another
 version of the core is an install-time error rather than a runtime surprise.
 
 ```bash
-npm i @sanaafshani/warden-ssr \
-      @sanaafshani/warden-ssr-headers \
-      @sanaafshani/warden-ssr-authn \
-      @sanaafshani/warden-ssr-ratelimit
+npm i @wardenjs/ssr \
+      @wardenjs/ssr-headers \
+      @wardenjs/ssr-authn \
+      @wardenjs/ssr-ratelimit
 ```
 
 Node **≥ 22.12** is required. The packages are ESM; CJS consumers load them
@@ -27,10 +27,10 @@ request first and the response last.
 
 ```ts
 // security.ts — one place that knows your secrets.
-import { chain } from '@sanaafshani/warden-ssr';
-import { secureHeaders } from '@sanaafshani/warden-ssr-headers';
-import { createLogger, requestLogger } from '@sanaafshani/warden-ssr-logging';
-import { rateLimiter, memoryStore } from '@sanaafshani/warden-ssr-ratelimit';
+import { chain } from '@wardenjs/ssr';
+import { secureHeaders } from '@wardenjs/ssr-headers';
+import { createLogger, requestLogger } from '@wardenjs/ssr-logging';
+import { rateLimiter, memoryStore } from '@wardenjs/ssr-ratelimit';
 
 const logger = createLogger();
 const limiter = rateLimiter({ store: memoryStore() });
@@ -62,7 +62,7 @@ shape of a Next.js route handler, with no adapter.
 A decorator that adds context changes the type of everything inside it.
 
 ```ts
-import { sessions } from '@sanaafshani/warden-ssr-authn';
+import { sessions } from '@wardenjs/ssr-authn';
 
 const session = sessions({
   secret: process.env.SESSION_SECRET!,
@@ -92,7 +92,7 @@ Roles, permissions and the principal shape are yours, not the library's.
 Declare them once and every plugin picks them up:
 
 ```ts
-declare module '@sanaafshani/warden-ssr' {
+declare module '@wardenjs/ssr' {
   interface SecurityRegistry {
     role: 'user' | 'admin';
     permission: 'post:create' | 'post:delete';
@@ -124,9 +124,9 @@ The browser track composes the same way, except a decorator's input and output
 types are identical, so order is the only thing you choose.
 
 ```ts
-import { decorate } from '@sanaafshani/warden-csr';
+import { decorate } from '@wardenjs/csr';
 import { webStorage, namespaced, expiring, encrypted, persistentKeyring, jsonStore }
-  from '@sanaafshani/warden-csr-storage';
+  from '@wardenjs/csr-storage';
 
 const keyring = persistentKeyring({ namespace: 'app' });
 
@@ -152,12 +152,12 @@ The runtime controls are opt-in per route. The lint rules are what stop the
 next person from going around them.
 
 ```bash
-npm i -D @sanaafshani/warden-csr-eslint-plugin
+npm i -D @wardenjs/csr-eslint-plugin
 ```
 
 ```js
 // eslint.config.mjs
-import warden from '@sanaafshani/warden-csr-eslint-plugin';
+import warden from '@wardenjs/csr-eslint-plugin';
 
 export default warden.enforce(
   { ...warden.configs.recommended, files: ['src/**/*.{ts,tsx}'] },

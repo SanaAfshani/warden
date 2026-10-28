@@ -20,13 +20,13 @@ put it in a chain.
 
 ```bash
 # server
-npm i @sanaafshani/warden-ssr @sanaafshani/warden-ssr-headers @sanaafshani/warden-ssr-authn
+npm i @wardenjs/ssr @wardenjs/ssr-headers @wardenjs/ssr-authn
 
 # browser
-npm i @sanaafshani/warden-csr @sanaafshani/warden-csr-storage
+npm i @wardenjs/csr @wardenjs/csr-storage
 
 # the rules that keep the unsafe APIs out of your code
-npm i -D @sanaafshani/warden-csr-eslint-plugin
+npm i -D @wardenjs/csr-eslint-plugin
 ```
 
 ```ts
@@ -73,15 +73,15 @@ runs, not how pages are rendered. Neither track renders anything.
 
 | Track | Core | Runs on | Plugins |
 | --- | --- | --- | --- |
-| **SSR** | `@sanaafshani/warden-ssr` | Any Fetch-API server | `headers` `ratelimit` `authn` `csrf` `access` `validate` `logging` `crypto` `ssrf` `upload` |
-| **CSR** | `@sanaafshani/warden-csr` | The browser | `storage` `sanitize` `access` `sso` `eslint-plugin` |
+| **SSR** | `@wardenjs/ssr` | Any Fetch-API server | `headers` `ratelimit` `authn` `csrf` `access` `validate` `logging` `crypto` `ssrf` `upload` |
+| **CSR** | `@wardenjs/csr` | The browser | `storage` `sanitize` `access` `sso` `eslint-plugin` |
 
 Both cores have **zero dependencies** and contain no control of their own —
 they are the contract, and every control is a plugin built on it.
 
 The tracks share no code. An SSR plugin never pulls in browser code and vice
 versa; a lint rule in this repo fails the build if one imports the other.
-Every package name starts with its track, so `npm ls '@sanaafshani/warden-ssr*'`
+Every package name starts with its track, so `npm ls '@wardenjs/ssr*'`
 shows exactly what a server installed.
 
 ### Browser composition
@@ -174,7 +174,7 @@ npm test            # SSR in Node, CSR in jsdom
 npm run release     # clean build, every check above, then npm publish --workspaces
 ```
 
-Each package's `src` is reachable through the `@sanaafshani/source` export
+Each package's `src` is reachable through the `@wardenjs/source` export
 condition, which TypeScript (`customConditions`) and Vitest use, so tests and
 typechecking never run against stale `dist` output. Published consumers never
 see that condition.

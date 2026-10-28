@@ -1,4 +1,4 @@
-# @sanaafshani/warden-csr-storage
+# @wardenjs/csr-storage
 
 > Part of [warden](https://github.com/SanaAfshani/warden)'s **browser track**: security controls for code that runs in the
 > browser. Here *CSR* means *client side*, not client-side rendering. Nothing here is a trust
@@ -7,12 +7,12 @@
 Browser storage built from decorators: namespaced, expiring, encrypted.
 
 ```bash
-npm i @sanaafshani/warden-csr @sanaafshani/warden-csr-storage
+npm i @wardenjs/csr @wardenjs/csr-storage
 ```
 
 ```ts
-import { decorate } from '@sanaafshani/warden-csr';
-import { clearStore, encrypted, expiring, jsonStore, namespaced, persistentKeyring, webStorage } from '@sanaafshani/warden-csr-storage';
+import { decorate } from '@wardenjs/csr';
+import { clearStore, encrypted, expiring, jsonStore, namespaced, persistentKeyring, webStorage } from '@wardenjs/csr-storage';
 
 const keyring = persistentKeyring({ namespace: 'app' });
 const store = decorate(

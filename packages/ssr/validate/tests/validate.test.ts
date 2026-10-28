@@ -1,6 +1,6 @@
 import { describe, expect, expectTypeOf, it } from 'vitest';
 import { z } from 'zod';
-import { chain } from '@sanaafshani/warden-ssr';
+import { chain } from '@wardenjs/ssr';
 import { body, params, query, readForm } from '../src/index.js';
 
 const json = (value: string, headers: Record<string, string> = {}) =>

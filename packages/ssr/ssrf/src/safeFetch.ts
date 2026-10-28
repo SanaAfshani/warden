@@ -1,7 +1,7 @@
 import { lookup } from 'node:dns/promises';
 import { request as httpsRequest } from 'node:https';
 import { isIP, type LookupFunction } from 'node:net';
-import { emit, HttpError, type SecurityEventHandler } from '@sanaafshani/warden-ssr';
+import { emit, HttpError, type SecurityEventHandler } from '@wardenjs/ssr';
 import { blockedRange } from './address.js';
 
 export type SsrfReason =

@@ -1,4 +1,4 @@
-import { emit, type Decorator, type KeyValueStore, type SecurityEventHandler } from '@sanaafshani/warden-csr';
+import { emit, type Decorator, type KeyValueStore, type SecurityEventHandler } from '@wardenjs/csr';
 import { decryptString, encryptString } from './aes.js';
 import type { Keyring } from './keyring.js';
 

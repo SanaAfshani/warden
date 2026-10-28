@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
-import { chain } from '@sanaafshani/warden-ssr';
+import { chain } from '@wardenjs/ssr';
 import { authenticate, checkPasswordAgainstBreaches, checkPasswordStrength, lockout, type CounterStore } from '../src/index.js';
 import { passwordHasher } from '../src/node.js';
 

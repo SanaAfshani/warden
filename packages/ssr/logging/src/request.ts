@@ -1,4 +1,4 @@
-import { defineDecorator, randomBytes, withHeaders, type Decorator } from '@sanaafshani/warden-ssr';
+import { defineDecorator, randomBytes, withHeaders, type Decorator } from '@wardenjs/ssr';
 import type { Logger } from './logger.js';
 
 export interface RequestLoggerOptions {

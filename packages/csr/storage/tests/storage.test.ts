@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { decorate, type SecurityEvent } from '@sanaafshani/warden-csr';
+import { decorate, type SecurityEvent } from '@wardenjs/csr';
 import {
   clearStore,
   encrypted,
